@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<link rel="stylesheet" href="/css/general pages css/contact_us.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<div class="header-contactus">
+    <h2>Connect via Social Media</h2>
+    <hr class="underline">
+</div>
+
+<div class="social-media">
+    <div class="social-icon">
+        <i class="fab fa-facebook-f"></i>
+        <p>Facebook<br>@@bein_equipment</p>
+    </div>
+    <div class="social-icon">
+        <i class="fab fa-linkedin-in"></i>
+        <p>LinkedIn<br>@@bein_equipment</p>
+    </div>
+    <div class="social-icon">
+        <i class="fab fa-twitter"></i>
+        <p>Twitter<br>@@bein_equipment</p>
+    </div>
+    <div class="social-icon">
+        <i class="fab fa-instagram"></i>
+        <p>Instagram<br>@@bein_equipment</p>
+    </div>
+    <div class="social-icon">
+        <i class="fab fa-youtube"></i>
+        <p>YouTube<br>BEIN Equipment</p>
+    </div>
+</div>
+
+<div class="contact-container">
+    <h2>Drop Us a Message</h2>
+    <form class="contact-form">
+        <div class="form-group">
+            <input type="text" placeholder="Name & Surname" required>
+            <input type="text" placeholder="Number" required>
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Company Name" required>
+        </div>
+        <div class="form-group">
+            <select required>
+                <option disabled selected>Job Level</option>
+                <option value="entry">Entry Level</option>
+                <option value="mid">Mid Level</option>
+                <option value="senior">Senior Level</option>
+                <option value="executive">Executive</option>
+            </select>
+            <select required>
+                <option disabled selected>Industry</option>
+                <option value="it">IT</option>
+                <option value="engineering">Engineering</option>
+                <option value="architecture">Architecture</option>
+                <option value="construction">Construction</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select required>
+                <option disabled selected>Number of
+                    Employees</option>
+                <option value="1-10">1-10</option>
+                <option value="11-50">11-50</option>
+                <option value="51-200">51-200</option>
+                <option value="201-500">201-500</option>
+                <option value="500+">500+</option>
+            </select>
+            <input type="text" placeholder="State/Province" required>
+        </div>
+        <textarea placeholder="Your Message" rows="4"
+            required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>

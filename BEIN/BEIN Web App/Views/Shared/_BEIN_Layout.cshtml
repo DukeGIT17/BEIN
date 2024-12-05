@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.title - Built Environment Innovative Network</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/layout css/layout.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a asp-action="LandingPage" asp-controller="General" class="nav__logo">
+                <i class="ri-planet-line"></i>
+                <span>BEIN</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a asp-action="LandingPage" asp-controller="General" class="nav__link active">Home</a></li>
+                    <li><a asp-action="AboutUsPage" asp-controller="General" class="nav__link">About Us</a></li>
+                    <li class="nav__dropdown">
+                        <button class="nav__link dropdown__button">
+                            Solutions
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="dropdown__content">
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-building-2-line"></i> Architecture
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-leaf-line"></i> Landscaping
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-earth-line"></i> Environmental Engineering
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-price-tag-3-line"></i> Property Valuation
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-briefcase-3-line"></i> Project Management
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-calculator-line"></i> Quantity Surveying
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-map-pin-2-line"></i> Town & Regional Planning
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-ruler-line"></i> Land Surveying
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-leaf-fill"></i> Environment Assessment
+                            </a>
+                            <a href="/Final/loginReg/loginReg.html">
+                                <i class="ri-compass-2-line"></i> Geomatics
+                            </a>
+                        </div>
+                    </li>
+                    <li><a asp-controller="General" asp-action="ContactUsPage" class="nav__link">Contact Us</a></li>
+                </ul>
+
+                <div class="nav__actions">
+                    <div class="search__container">
+                        <input type="search" placeholder="Search..." class="search__input">
+                        <button class="search__button">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+
+                    <div class="nav__buttons">
+                        <a asp-controller="Account" asp-action="SignInOrRegister" class="btn btn--outline">Sign In</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+    <main>
+        <div>
+            @RenderBody()
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a asp-controller="General" asp-action="LandingPage" class="footer__logo">
+                        <i class="ri-planet-line"></i>
+                        <span>BEIN</span>
+                    </a>
+                    <p>Professional CAD solutions for modern teams</p>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a asp-controller="General" asp-action="AboutUsPage">About</a></li>
+                            <li><a asp-controller="General" asp-action="AboutUsPage">Careers</a></li>
+                            <li><a asp-controller="General" asp-action="AboutUsPage">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#documentation">Documentation</a></li>
+                            <li><a asp-controller="General" asp-action="ContactUsPage">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#privacy">Privacy</a></li>
+                            <li><a href="#terms">Terms</a></li>
+                            <li><a href="#security">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2024 BEIN. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/layout js/layout.js"></script>
+</body>
+</html>

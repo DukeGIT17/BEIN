@@ -1,0 +1,17 @@
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\bin\Debug\net8.0\BEIN RL.deps.json
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\bin\Debug\net8.0\BEIN RL.runtimeconfig.json
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\bin\Debug\net8.0\BEIN RL.dll
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\bin\Debug\net8.0\BEIN RL.pdb
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.csproj.AssemblyReference.cache
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.AssemblyInfoInputs.cache
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.AssemblyInfo.cs
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.csproj.CoreCompileInputs.cache
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.dll
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\refint\BEIN RL.dll
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.pdb
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.genruntimeconfig.cache
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\ref\BEIN RL.dll
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\bin\Debug\net8.0\BEIN DL.dll
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\bin\Debug\net8.0\BEIN DL.pdb
+C:\Users\Lukhanyo\Documents\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.csproj.Up2Date

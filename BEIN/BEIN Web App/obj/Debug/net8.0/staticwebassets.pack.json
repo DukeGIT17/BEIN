@@ -1,0 +1,449 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BEIN Web App.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BEIN Web App.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\about_us.css",
+      "PackagePath": "staticwebassets\\css\\general pages css\\about_us.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\contact_us.css",
+      "PackagePath": "staticwebassets\\css\\general pages css\\contact_us.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\landing_page.css",
+      "PackagePath": "staticwebassets\\css\\general pages css\\landing_page.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\css\\layout css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout css\\layout.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\css\\sign-in css\\sign-in.css",
+      "PackagePath": "staticwebassets\\css\\sign-in css\\sign-in.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\ArchiCAD.jpeg",
+      "PackagePath": "staticwebassets\\images\\ArchiCAD.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\Caddie Square.jpeg",
+      "PackagePath": "staticwebassets\\images\\Caddie Square.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\Caddie.jpeg",
+      "PackagePath": "staticwebassets\\images\\Caddie.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\Tekla 2.jpeg",
+      "PackagePath": "staticwebassets\\images\\Tekla 2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\Tekla.png",
+      "PackagePath": "staticwebassets\\images\\Tekla.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\ai.jpg",
+      "PackagePath": "staticwebassets\\images\\ai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\all built environment engineering.png",
+      "PackagePath": "staticwebassets\\images\\all built environment engineering.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\archicad.jpg",
+      "PackagePath": "staticwebassets\\images\\archicad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\architecture.jpeg",
+      "PackagePath": "staticwebassets\\images\\architecture.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\argus.png",
+      "PackagePath": "staticwebassets\\images\\argus.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\autocad civil 3d.png",
+      "PackagePath": "staticwebassets\\images\\autocad civil 3d.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\autodesk-logo-on-dark-background-600nw-2319624897.webp",
+      "PackagePath": "staticwebassets\\images\\autodesk-logo-on-dark-background-600nw-2319624897.webp"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\autodeskRevPic.jpg",
+      "PackagePath": "staticwebassets\\images\\autodeskRevPic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\banner_img.jpg",
+      "PackagePath": "staticwebassets\\images\\banner_img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\cad1.jpg",
+      "PackagePath": "staticwebassets\\images\\cad1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\caddie.jpg",
+      "PackagePath": "staticwebassets\\images\\caddie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\engine.png",
+      "PackagePath": "staticwebassets\\images\\engine.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\environmental assessment.jpeg",
+      "PackagePath": "staticwebassets\\images\\environmental assessment.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\etabs.jpeg",
+      "PackagePath": "staticwebassets\\images\\etabs.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\geomatics.jpeg",
+      "PackagePath": "staticwebassets\\images\\geomatics.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\land surveyor.jpeg",
+      "PackagePath": "staticwebassets\\images\\land surveyor.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\landscaping (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\landscaping (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\landscaping.jpeg",
+      "PackagePath": "staticwebassets\\images\\landscaping.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\lumion.png",
+      "PackagePath": "staticwebassets\\images\\lumion.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\matterport.jpg",
+      "PackagePath": "staticwebassets\\images\\matterport.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\matterport.png",
+      "PackagePath": "staticwebassets\\images\\matterport.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\micromine.png",
+      "PackagePath": "staticwebassets\\images\\micromine.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\project and construction management.jpeg",
+      "PackagePath": "staticwebassets\\images\\project and construction management.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\prokon.png",
+      "PackagePath": "staticwebassets\\images\\prokon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\property and construction management.jpeg",
+      "PackagePath": "staticwebassets\\images\\property and construction management.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\property valuers.jpeg",
+      "PackagePath": "staticwebassets\\images\\property valuers.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\quantity surveying.jpeg",
+      "PackagePath": "staticwebassets\\images\\quantity surveying.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\redbook.png",
+      "PackagePath": "staticwebassets\\images\\redbook.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\sketchUp.jpg",
+      "PackagePath": "staticwebassets\\images\\sketchUp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\sketchup.png",
+      "PackagePath": "staticwebassets\\images\\sketchup.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\surpac.jpeg",
+      "PackagePath": "staticwebassets\\images\\surpac.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\town and regional planning.jpeg",
+      "PackagePath": "staticwebassets\\images\\town and regional planning.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\images\\winqs.png",
+      "PackagePath": "staticwebassets\\images\\winqs.png"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\js\\general pages js\\about_us.js",
+      "PackagePath": "staticwebassets\\js\\general pages js\\about_us.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\js\\layout js\\layout.js",
+      "PackagePath": "staticwebassets\\js\\layout js\\layout.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\js\\sign-in js\\sign-in.js",
+      "PackagePath": "staticwebassets\\js\\sign-in js\\sign-in.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BEIN Web App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BEIN Web App.props",
+      "PackagePath": "build\\BEIN Web App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BEIN Web App.props",
+      "PackagePath": "buildMultiTargeting\\BEIN Web App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BEIN Web App.props",
+      "PackagePath": "buildTransitive\\BEIN Web App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
