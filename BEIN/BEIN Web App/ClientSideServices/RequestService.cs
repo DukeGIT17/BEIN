@@ -7,7 +7,7 @@ namespace BEIN_Web_App.ClientSideServices
     public class RequestService(HttpClient client, IConfiguration configuration) : IRequestService
     {
         private readonly string BasePath = $"{configuration["APIBasePaths:Https"]}";
-        private Dictionary<string, object> _returnDictionary = [];
+        private readonly Dictionary<string, object> _returnDictionary = [];
 
         public async Task<Dictionary<string, object>> GetRequestAsync<T>(string endpoint)
         {
@@ -18,6 +18,24 @@ namespace BEIN_Web_App.ClientSideServices
 
                 _returnDictionary["Success"] = true;
                 _returnDictionary["Result"] = await response.Content.ReadFromJsonAsync<T>();
+                return _returnDictionary;
+            }
+            catch (Exception ex)
+            {
+                _returnDictionary["Success"] = false;
+                _returnDictionary["ErrorMessage"] = ex.Message;
+                return _returnDictionary;
+            }
+        }
+
+        public async Task<Dictionary<string, object>> GetRequestAsync(string endpoint)
+        {
+            try
+            {
+                var response = await client.GetAsync(BasePath + endpoint);
+                if (!response.IsSuccessStatusCode) throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
+
+                _returnDictionary["Success"] = true;
                 return _returnDictionary;
             }
             catch (Exception ex)

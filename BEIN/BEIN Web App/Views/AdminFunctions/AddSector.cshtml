@@ -1,0 +1,26 @@
+﻿@model Sector
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add Sector";
+}
+
+<link rel="stylesheet" href="~/css/temp.css" />
+
+<div class="container">
+    <h1>Add Sector</h1>
+    <form asp-action="AddSector" method="post">
+        <div asp-validation-summary="All"></div>
+        <input asp-for="Id" type="hidden" value="Placeholder" />
+        <div>
+            <label asp-for="Title">Sector Title</label><br />
+            <input asp-for="Title" placeholder="Enter sector title">
+        </div>
+        <div>
+            <label asp-for="Description">Sector Description</label><br />
+            <textarea asp-for="Description" placeholder="Enter sector Description"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

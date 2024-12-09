@@ -9,59 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BEIN_Web_App
 build_property.RootNamespace = BEIN_Web_App
-build_property.ProjectDir = C:\Users\Lukhanyo\Documents\BEIN\BEIN Web App\
+build_property.ProjectDir = C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Lukhanyo\Documents\BEIN\BEIN Web App
+build_property.MSBuildProjectDirectory = C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Account/SignInOrRegister.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Account/SignInOrRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW5PclJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/General/About_Us.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/AdminFunctions/AddSector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcQWRkU2VjdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/AdminFunctions/AddSoftware.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcQWRkU29mdHdhcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/General/About_Us.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFxBYm91dF9Vcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/General/Contact_Us.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/General/Contact_Us.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFxDb250YWN0X1VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/General/Landing_Page.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/General/Landing_Page.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFxMYW5kaW5nX1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Home/Index.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Home/Privacy.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Shared/Error.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Sectors/Sector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdG9yc1xTZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Shared/_BEIN_Layout.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Shared/_BEIN_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CRUlOX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/_ViewImports.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/_ViewStart.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Documents/BEIN/BEIN Web App/Views/Shared/_Layout.cshtml]
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4lpczux9nt

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BEIN ServerSide SL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d5ac6919a0d0abc6881c14ce806bb7bc66f46f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BEIN ServerSide SL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BEIN ServerSide SL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

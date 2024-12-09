@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN API\\BEIN API.csproj": {}
+    "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\BEIN API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN API\\BEIN API.csproj": {
+    "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\BEIN API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN API\\BEIN API.csproj",
+        "projectUniqueName": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\BEIN API.csproj",
         "projectName": "BEIN API",
-        "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN API\\BEIN API.csproj",
+        "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\BEIN API.csproj",
         "packagesPath": "C:\\Users\\Lukhanyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN API\\obj\\",
+        "outputPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,18 +26,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj": {
-                "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj"
+              "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj": {
+                "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj"
               },
-              "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj": {
-                "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj"
+              "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj": {
+                "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj"
               }
             }
           }
@@ -51,7 +50,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -113,18 +113,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj": {
+    "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj",
+        "projectUniqueName": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj",
         "projectName": "BEIN DL",
-        "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj",
+        "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj",
         "packagesPath": "C:\\Users\\Lukhanyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\obj\\",
+        "outputPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -139,7 +139,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -157,7 +156,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -212,18 +212,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN RL\\BEIN RL.csproj": {
+    "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN RL\\BEIN RL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN RL\\BEIN RL.csproj",
+        "projectUniqueName": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN RL\\BEIN RL.csproj",
         "projectName": "BEIN RL",
-        "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN RL\\BEIN RL.csproj",
+        "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN RL\\BEIN RL.csproj",
         "packagesPath": "C:\\Users\\Lukhanyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN RL\\obj\\",
+        "outputPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN RL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -238,15 +238,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj": {
-                "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj"
+              "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj": {
+                "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj"
               }
             }
           }
@@ -260,7 +259,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -315,18 +315,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj": {
+    "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj",
+        "projectUniqueName": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj",
         "projectName": "BEIN ServerSide SL",
-        "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj",
+        "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj",
         "packagesPath": "C:\\Users\\Lukhanyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN ServerSide SL\\obj\\",
+        "outputPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -341,18 +341,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj": {
-                "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN DL\\BEIN DL.csproj"
+              "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj": {
+                "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\BEIN DL.csproj"
               },
-              "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN RL\\BEIN RL.csproj": {
-                "projectPath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN RL\\BEIN RL.csproj"
+              "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN RL\\BEIN RL.csproj": {
+                "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN RL\\BEIN RL.csproj"
               }
             }
           }
@@ -366,7 +365,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -421,7 +421,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

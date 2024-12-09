@@ -25,6 +25,20 @@
     --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
 }
 
+@font-face {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(~/fonts/Inter/Inter-VariableFont_opsz,wght.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url(~/fonts/Inter/Inter-VariableFont_opsz,wght.ttf) format('ttf');
+}
+
 * {
     margin: 0;
     padding: 0;

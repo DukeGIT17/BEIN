@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WMvwdsP8YoQ=",
+  "dgSpecHash": "qnwxveKglxs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lukhanyo\\Documents\\BEIN\\BEIN Web App\\BEIN Web App.csproj",
+  "projectFilePath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\BEIN Web App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lukhanyo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Lukhanyo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

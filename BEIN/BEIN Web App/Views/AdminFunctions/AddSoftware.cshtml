@@ -1,0 +1,46 @@
+﻿@model SoftwareProduct
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add Software";
+}
+<link rel="stylesheet" href="~/css/temp.css" />
+
+<div class="container">
+    <h1>Add Software</h1>
+    <form asp-action="AddSoftware" method="post">
+        <div asp-validation-summary="All"></div>
+        <input asp-for="Id" type="hidden" value="Placeholder" />
+        <div>
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" id="software-name" placeholder="Software Name" />
+        </div>
+        <div>
+            <label aspfor="Description">Description</label>
+            <textarea asp-for="Description" id="description" placeholder="Software Description"></textarea>
+        </div>
+        <div>
+            <label asp-for="Vendor">Vendor Name</label>
+            <input asp-for="Vendor" id="vendor-name" placeholder="Vendor Name" />
+        </div>
+        <div>
+            <label for="sector"></label>
+            <input name="sector" type="text" placeholder="Sector name" required />
+        </div>
+        <div>
+            <label asp-for="ProjectStage">Project Stage</label>
+            <input asp-for="ProjectStage" id="project-stage" placeholder="Project Stage" />
+        </div>
+        <div>
+            <label asp-for="Professions">Professions</label><br />
+            <select asp-for="Professions" multiple>
+                <option value="Architect">Architect</option>
+                <option value="Civil Engineer">Civil Enginner</option>
+                <option value="Land Surveyor">Land Surveyor</option>
+                <option value="Quantity Surveyor">Quantity Surveyor</option>
+            </select>            
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

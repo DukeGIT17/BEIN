@@ -95,5 +95,22 @@ namespace BEIN_RL.Repositories
                 return _returnDictionary;
             }
         }
+
+        public async Task<Dictionary<string, object>> SignOutAsync()
+        {
+            try
+            {
+                await signInManager.SignOutAsync();
+
+                _returnDictionary["Success"] = true;
+                return _returnDictionary;
+            }
+            catch (Exception ex)
+            {
+                _returnDictionary["Success"] = false;
+                _returnDictionary["ErrorMessage"] = ex.Message + "\nInner Exception: " + ex.InnerException;
+                return _returnDictionary;
+            }
+        }
     }
 }

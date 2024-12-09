@@ -916,7 +916,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
         "runtime": {
-          "BEIN DL.dll": {}
+          "BEIN DL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "BEIN RL/1.0.0": {
@@ -929,13 +932,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
         "runtime": {
-          "BEIN RL.dll": {}
-        }
-      },
-      "Shared Library/1.0.0.0": {
-        "runtime": {
-          "Shared Library.dll": {
-            "assemblyVersion": "1.0.0.0",
+          "BEIN RL.dll": {
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1536,11 +1534,6 @@
     },
     "BEIN RL/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Shared Library/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

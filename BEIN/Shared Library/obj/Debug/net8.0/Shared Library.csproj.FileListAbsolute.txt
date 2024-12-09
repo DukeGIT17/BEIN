@@ -10,3 +10,16 @@ C:\Users\Lukhanyo\Documents\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.
 C:\Users\Lukhanyo\Documents\BEIN\Shared Library\obj\Debug\net8.0\refint\Shared Library.dll
 C:\Users\Lukhanyo\Documents\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.pdb
 C:\Users\Lukhanyo\Documents\BEIN\Shared Library\obj\Debug\net8.0\ref\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\bin\Debug\net8.0\Shared Library.deps.json
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\bin\Debug\net8.0\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\bin\Debug\net8.0\Shared Library.pdb
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.csproj.AssemblyReference.cache
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.AssemblyInfoInputs.cache
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.AssemblyInfo.cs
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.csproj.CoreCompileInputs.cache
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.sourcelink.json
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\refint\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.pdb
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\ref\Shared Library.dll

@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "App and API",
+    "Projects": [
+      {
+        "Path": "BEIN API.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "..\\BEIN Web App\\BEIN Web App.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]

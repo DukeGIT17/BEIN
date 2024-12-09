@@ -6,5 +6,6 @@ namespace BEIN_Web_App.IClientSideServices
     {
         Task<Dictionary<string, object>> SendRequestAsync<T>(T model, HttpMethod method, string endpoint);
         Task<Dictionary<string, object>> GetRequestAsync<T>(string endpoint);
+        Task<Dictionary<string, object>> GetRequestAsync(string endpoint);
     }
 }

@@ -11,6 +11,9 @@ namespace BEIN_API.UtilityPrograms
         {
             var scope = app.Services.CreateScope();
             var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var context = scope.ServiceProvider.GetRequiredService<BeinDbContext>();
+
             var roles = new[] { "System Admin", "User" };
             foreach (var role in roles)
             {
@@ -18,45 +21,65 @@ namespace BEIN_API.UtilityPrograms
                     await roleManager.CreateAsync(new IdentityRole(role));
             }
 
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            if (await userManager.FindByEmailAsync("Lukhanyo@gmail.com") == null)
-            {
-                var admin = new IdentityUser
+            User[] admins =
+            [
+                new User 
                 {
-                    UserName = "Lukhanyo_Mayekiso",
+                    Name = "Lukhanyo",
+                    Surname = "Mayekiso",
                     Email = "Lukhanyo@gmail.com",
                     PhoneNumber = "0739002497"
-                };
-
-                
-                var result = await userManager.CreateAsync(admin, "Admin101!");
-                if (!result.Succeeded)
+                },
+                new User 
                 {
-                    List<string> errors = [];
-                    result.Errors.ToList().ForEach(error => errors.Add($"{error.Code}: {error.Description}"));
-                    Console.WriteLine("\n\nAdmin account creation failed.\nErrors: " + string.Join("\n", errors) + "\n\n");
-                }
-                
-                result = await userManager.AddToRoleAsync(admin, "System Admin");
-                if (!result.Succeeded) Console.WriteLine("Failed to add user to the admin role." + string.Join("\n", result.Errors));
+                    Name = "Thabiso",
+                    Surname = "Soaisa",
+                    Email = "Thabiso@gmail.com",
+                    PhoneNumber = "078958568"
+                },
 
-                var context = scope.ServiceProvider.GetRequiredService<BeinDbContext>();
-                var user = await context.Users.FirstOrDefaultAsync(u => u.Email == "Lukhanyo@gmail.com");
-                if (user is null)
+            ];
+
+            foreach (var admin in admins)
+            {
+                if (await userManager.FindByEmailAsync(admin.Email) == null)
                 {
-                    await context.AddAsync(new User
+                    var sysAdmin = new IdentityUser
                     {
-                        Id = Guid.NewGuid().ToString(),
-                        Name = "Lukhanyo",
-                        Surname = "Mayekiso",
-                        Email = "Lukhanyo@gmail.com",
-                        PhoneNumber = "0739002497",
-                        Profession = "Admin",
-                        YearsOfExperience = 0
-                    });
-                    await context.SaveChangesAsync();
+                        UserName = $"{admin.Name}_{admin.Surname}",
+                        Email = admin.Email,
+                        PhoneNumber = admin.PhoneNumber
+                    };
+
+
+                    var result = await userManager.CreateAsync(sysAdmin, "Admin101!");
+                    if (!result.Succeeded)
+                    {
+                        List<string> errors = [];
+                        result.Errors.ToList().ForEach(error => errors.Add($"{error.Code}: {error.Description}"));
+                        Console.WriteLine("\n\nAdmin account creation failed.\nErrors: " + string.Join("\n", errors) + "\n\n");
+                    }
+
+                    result = await userManager.AddToRoleAsync(sysAdmin, "System Admin");
+                    if (!result.Succeeded) Console.WriteLine("Failed to add user to the admin role." + string.Join("\n", result.Errors));
+
+                    var user = await context.Users.FirstOrDefaultAsync(u => u.Email == admin.Email);
+                    if (user is null)
+                    {
+                        await context.AddAsync(new User
+                        {
+                            Id = Guid.NewGuid().ToString(),
+                            Name = admin.Name,
+                            Surname = admin.Surname,
+                            Email = admin.Email,
+                            PhoneNumber = admin.PhoneNumber,
+                            Profession = "Admin",
+                            YearsOfExperience = 0
+                        });
+                    }
                 }
             }
+            await context.SaveChangesAsync();
         }
     }
 }

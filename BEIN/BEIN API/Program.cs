@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<IAccount, AccountRepo>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IAdminFunctions, AdminFunctionsRepo>();
+builder.Services.AddScoped<IAdminFunctionsService, AdminFunctionsService>();
 
 builder.Services.AddDbContext<BeinDbContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),

@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "BEIN_API.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api.bein.com/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "BEIN_DL.Models.RegistrationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.AccountController",
+    "Method": "SignIn",
+    "RelativePath": "api.bein.com/Account/SignIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "BEIN_DL.Models.SignInModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.AccountController",
+    "Method": "SignOut",
+    "RelativePath": "api.bein.com/Account/SignOut",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.AdminFunctionsController",
+    "Method": "AddSector",
+    "RelativePath": "api.bein.com/AdminFunctions/AddSector",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sector",
+        "Type": "BEIN_DL.Models.Sector",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.AdminFunctionsController",
+    "Method": "AddSoftwareProduct",
+    "RelativePath": "api.bein.com/AdminFunctions/AddSoftwareProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "software",
+        "Type": "BEIN_DL.Models.SoftwareProduct",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

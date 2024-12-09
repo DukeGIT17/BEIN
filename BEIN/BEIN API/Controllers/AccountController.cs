@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BEIN_API.Controllers
 {
-    [Route("bein.com/[controller]")]
+    [Route("api.bein.com/[controller]")]
     [ApiController]
     public class AccountController(IAccountService accountService) : ControllerBase
     {
@@ -31,6 +31,21 @@ namespace BEIN_API.Controllers
             try
             {
                 _returnDictionary = accountService.SignInAsync(model).Result;
+                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost(nameof(SignOut))]
+        public new IActionResult SignOut()
+        {
+            try
+            {
+                _returnDictionary = accountService.SignOutAsync().Result;
                 if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
                 return Ok();
             }

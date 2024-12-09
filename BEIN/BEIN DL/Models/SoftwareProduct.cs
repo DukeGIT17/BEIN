@@ -25,14 +25,14 @@ namespace BEIN_DL.Models
         [StringLength(5000, ErrorMessage = "A review must contain between 5 and 5000 characters.")]
         public string? Review { get; set; }
 
-        public List<string> Sectors { get; set; }
+        public List<SectorProduct>? Sectors { get; set; }
 
         public string ProjectStage { get; set; }
 
         public List<string> Professions { get; set; }
 
-        public List<Feature> Features { get; set; }
+        public List<Feature>? Features { get; set; }
 
-        public List<Visit> Visits { get; set; }
+        public List<Visit>? Visits { get; set; }
     }
 }
