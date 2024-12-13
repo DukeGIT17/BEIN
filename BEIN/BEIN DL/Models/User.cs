@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace BEIN_DL.Models
@@ -6,8 +6,7 @@ namespace BEIN_DL.Models
     public class User
     {
         [Key]
-        [BindNever]
-        public string Id { get; set; }
+        public string Id { get; set; } = "";
 
         [Required(ErrorMessage = "The name field is required.")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Please provide a valid name. A name must be between 50 and 3 characters.")]

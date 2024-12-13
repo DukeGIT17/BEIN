@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace BEIN_DL.Models
@@ -6,8 +6,7 @@ namespace BEIN_DL.Models
     public class SoftwareProduct
     {
         [Key]
-        [BindNever]
-        public string Id { get; set; }
+        public string Id { get; set; } = "";
 
         [Required(ErrorMessage = "Please provide the software's name.", AllowEmptyStrings = false)]
         [StringLength(100, ErrorMessage = "Names of softwares should be between 1 and 100 characters.")]

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace BEIN_DL.Models
@@ -6,8 +6,8 @@ namespace BEIN_DL.Models
     public class Sector
     {
         [Key]
-        [BindNever]
-        public string Id { get; set; }
+        
+        public string Id { get; set; } = "";
 
         [Required(ErrorMessage = "Please provide a sector title.")]
         [StringLength(250, ErrorMessage = "Sector titles should not be greater than 250 characters.")]
