@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BEIN_DL.Models
@@ -6,6 +7,7 @@ namespace BEIN_DL.Models
     public class SectorInformation
     {
         [Key]
+        [BindNever]
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Please provide a header.")]
@@ -14,6 +16,7 @@ namespace BEIN_DL.Models
 
         #region Foreign Keys
         [ForeignKey(nameof(Sector))]
+        [BindNever]
         public string SectorId { get; set; }
         #endregion
 

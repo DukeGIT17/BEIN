@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using BEIN_Web_App.IClientSideServices;
+@inject INavigationService navigationService;
+
+@{
+    var sectors = await navigationService.GetAllSectorsAsync();
+}
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -35,7 +42,13 @@
                             <i class="ri-arrow-down-s-line"></i>
                         </button>
                         <div class="dropdown__content">
-                            <a asp-action="Sector" asp-controller="Sectors">
+                            @foreach (var sector in sectors) 
+                            {  
+                                <a asp-action="GetSector" asp-controller="Sectors" asp-route-sectorName="@sector.Title">
+                                    <i class="ri-building-2-line"></i>@sector.Title
+                                </a>
+                            }
+                            @* <a asp-action="Sector" asp-controller="Sectors">
                                 <i class="ri-building-2-line"></i> Architecture
                             </a>
                             <a href="/Final/loginReg/loginReg.html">
@@ -64,7 +77,7 @@
                             </a>
                             <a href="/Final/loginReg/loginReg.html">
                                 <i class="ri-compass-2-line"></i> Geomatics
-                            </a>
+                            </a> *@
                         </div>
                     </li>
                     <li><a asp-controller="General" asp-action="ContactUsPage" class="nav__link">Contact Us</a></li>

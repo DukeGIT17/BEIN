@@ -140,10 +140,74 @@
           }
         }
       }
+    },
+    "/api.bein.com/Sector/GetAll": {
+      "get": {
+        "tags": [
+          "Sector"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Sector/GetSector": {
+      "get": {
+        "tags": [
+          "Sector"
+        ],
+        "parameters": [
+          {
+            "name": "sectorName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "CardInfo": {
+        "required": [
+          "header",
+          "information"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "header": {
+            "maxLength": 35,
+            "minLength": 3,
+            "type": "string"
+          },
+          "information": {
+            "maxLength": 250,
+            "minLength": 10,
+            "type": "string"
+          },
+          "sectorInformationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "sectorInformation": {
+            "$ref": "#/components/schemas/SectorInformation"
+          }
+        },
+        "additionalProperties": false
+      },
       "Feature": {
         "required": [
           "description",
@@ -165,12 +229,12 @@
             "minLength": 3,
             "type": "string"
           },
-          "softwareProduct": {
-            "$ref": "#/components/schemas/SoftwareProduct"
-          },
           "softwareProductId": {
             "type": "string",
             "nullable": true
+          },
+          "softwareProduct": {
+            "$ref": "#/components/schemas/SoftwareProduct"
           }
         },
         "additionalProperties": false
@@ -234,6 +298,79 @@
               "$ref": "#/components/schemas/SectorProduct"
             },
             "nullable": true
+          },
+          "sectorInformation": {
+            "$ref": "#/components/schemas/SectorInformation"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectorInformation": {
+        "required": [
+          "header"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "header": {
+            "maxLength": 35,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sectorId": {
+            "type": "string",
+            "nullable": true
+          },
+          "sector": {
+            "$ref": "#/components/schemas/Sector"
+          },
+          "cardInformation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CardInfo"
+            },
+            "nullable": true
+          },
+          "sectorPrinciples": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectorPrinciple"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectorPrinciple": {
+        "required": [
+          "description",
+          "principle"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "principle": {
+            "maxLength": 20,
+            "minLength": 3,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 250,
+            "minLength": 10,
+            "type": "string"
+          },
+          "sectorInformationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "sectorInformation": {
+            "$ref": "#/components/schemas/SectorInformation"
           }
         },
         "additionalProperties": false
@@ -323,13 +460,6 @@
             "type": "string",
             "nullable": true
           },
-          "sectors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SectorProduct"
-            },
-            "nullable": true
-          },
           "projectStage": {
             "type": "string",
             "nullable": true
@@ -338,6 +468,13 @@
             "type": "array",
             "items": {
               "type": "string"
+            },
+            "nullable": true
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectorProduct"
             },
             "nullable": true
           },

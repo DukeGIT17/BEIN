@@ -11,7 +11,7 @@ namespace BEIN_Web_App.Controllers
         [HttpGet]
         public IActionResult AddSector()
         {
-            return View();
+            return View(new Sector());
         }
 
         [HttpPost]

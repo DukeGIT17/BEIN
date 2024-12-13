@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BEIN_DL.Models
@@ -6,6 +7,7 @@ namespace BEIN_DL.Models
     public class SectorPrinciple
     {
         [Key]
+        [BindNever]
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Please provide sector principle.")]
@@ -18,6 +20,7 @@ namespace BEIN_DL.Models
 
         #region Foreign Keys
         [ForeignKey(nameof(SectorInformation))]
+        [BindNever]
         public string SectorInformationId { get; set; }
         #endregion
 

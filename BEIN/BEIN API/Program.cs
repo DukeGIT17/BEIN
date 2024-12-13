@@ -14,6 +14,8 @@ builder.Services.AddScoped<IAccount, AccountRepo>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAdminFunctions, AdminFunctionsRepo>();
 builder.Services.AddScoped<IAdminFunctionsService, AdminFunctionsService>();
+builder.Services.AddScoped<ISector, SectorRepo>();
+builder.Services.AddScoped<ISectorService, SectorService>();
 
 builder.Services.AddDbContext<BeinDbContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),

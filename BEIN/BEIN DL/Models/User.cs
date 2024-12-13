@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 
 namespace BEIN_DL.Models
 {
     public class User
     {
         [Key]
+        [BindNever]
         public string Id { get; set; }
 
         [Required(ErrorMessage = "The name field is required.")]
@@ -22,11 +24,13 @@ namespace BEIN_DL.Models
         [DataType(DataType.PhoneNumber, ErrorMessage = "Please enter a valid number.")]
         public string? PhoneNumber { get; set; }
 
-        [Required(ErrorMessage = "The profession field is required.", AllowEmptyStrings = false)]
+        [Required(ErrorMessage = "The profession field is required.")]
         public string? Profession { get; set; }
 
         public int YearsOfExperience { get; set; }
 
+        #region Navigation Properties
         public List<Visit>? Visits { get; set; }
+        #endregion
     }
 }

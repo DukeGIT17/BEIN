@@ -1,7 +1,5 @@
 using BEIN_Web_App.ClientSideServices;
 using BEIN_Web_App.IClientSideServices;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient<IRequestService, RequestService>();
+builder.Services.AddScoped<INavigationService, NavigationService>();
 
 var app = builder.Build();
 
@@ -29,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=General}/{action=LandingPage}/{id?}");
+    pattern: "{controller=AdminFunctions}/{action=AddSector}/{id?}");
 
 app.Run();

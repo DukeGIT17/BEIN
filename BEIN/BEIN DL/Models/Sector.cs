@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 
 namespace BEIN_DL.Models
 {
     public class Sector
     {
         [Key]
+        [BindNever]
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Please provide a sector title.")]

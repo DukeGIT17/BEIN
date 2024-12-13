@@ -1,14 +1,15 @@
 ﻿@model Sector
 @{
-    ViewData["Title"] = "Architecture";
+    ViewData["Title"] = Model.Title;
 }
 
 <link rel="stylesheet" href="~/css/general pages css/landing_page.css" />
+<link rel="stylesheet" href="~/css/sectors css/sectors.css" />
 
 <section id="introduction" style="padding: var(--section-spacing) 0; background-color: #f8fafc;">
     <div class="container">
-        <h2 class="section__title">Architecture Software Documentation</h2>
-        <p class="section__description">Comprehensive guides to help you master the most powerful architectural design tools in the industry.</p>
+        <h2 class="section__title">@Model.Title Software Documentation</h2>
+        <p class="section__description">@Model.Description</p>
 
         <div class="documentation__grid">
             <div class="documentation__card">
@@ -55,58 +56,47 @@
     </div>
 </section>
 
-<section class="tutorials" style="padding: var(--section-spacing) 0; background-color: #f8fafc;">
-    <div class="container">
-        <h2 class="section__title">Software Tutorials</h2>
-        <p class="section__description">Learn from expert-led video tutorials that will help you master architectural design software.</p>
-
-        <div class="hero__image" style="max-width: 960px; margin: 0 auto;">
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/Q4rbqUbhYXY" title="How to Make 3d Floor Plan in Blender" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-</section>
-
-<section class="products" id="products">
+<section class="products" id="products" style="background-color: #f8fafc;">
     <div class="container">
         <h2 class="section__title">Our Architecture Software Catalog</h2>
         <div class="features__grid">
             <div class="feature__card">
-                <img src="/Final/pictures/ArchiCAD.jpeg" alt="ArchiCAD">
+                <img src="~/images/ArchiCAD.jpeg" alt="ArchiCAD">
                 <h3>ArchiCAD 26</h3>
                 <p>Professional architectural design software with advanced BIM capabilities</p>
                 <p class="price">R49 000</p>
                 <a href="/cart" class="btn btn--filled">Add to Cart</a>
             </div>
             <div class="feature__card">
-                <img src="/Final/pictures/argus.png" alt="Argus">
+                <img src="~/images//argus.png" alt="Argus">
                 <h3>Argus VE</h3>
                 <p>Comprehensive real estate valuation and investment analysis tool</p>
                 <p class="price">R15 345</p>
                 <a href="/cart" class="btn btn--filled">Add to Cart</a>
             </div>
             <div class="feature__card">
-                <img src="/Final/pictures/lumion.png" alt="Lumion">
+                <img src="~/images/lumion.png" alt="Lumion">
                 <h3>Lumion Pro</h3>
                 <p>3D rendering and visualization software for architects and designers</p>
                 <p class="price">R67 909</p>
                 <a href="/cart" class="btn btn--filled">Add to Cart</a>
             </div>
             <div class="feature__card">
-                <img src="/Final/pictures/surpac.jpeg" alt="Surpac">
+                <img src="~/images/surpac.jpeg" alt="Surpac">
                 <h3>Surpac Mining</h3>
                 <p>Advanced geological and mine planning software for resource professionals</p>
                 <p class="price">R44 898</p>
                 <a href="/cart" class="btn btn--filled">Add to Cart</a>
             </div>
             <div class="feature__card">
-                <img src="/Final/pictures/autodeskRevPic.jpg" alt="Autodesk Revit">
+                <img src="~/images/autodeskRevPic.jpg" alt="Autodesk Revit">
                 <h3>Autodesk Revit</h3>
                 <p>Building Information Modeling (BIM) software for architectural design</p>
                 <p class="price">R35 620</p>
                 <a href="/cart" class="btn btn--filled">Add to Cart</a>
             </div>
             <div class="feature__card">
-                <img src="/Final/pictures/sketchup.png" alt="SketchUp">
+                <img src="~/images/sketchUp.png" alt="SketchUp">
                 <h3>SketchUp Pro</h3>
                 <p>3D modeling computer program for drawing applications</p>
                 <p class="price">R22 750</p>

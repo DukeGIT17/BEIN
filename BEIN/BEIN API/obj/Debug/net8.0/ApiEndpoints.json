@@ -72,5 +72,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.SectorController",
+    "Method": "GetAll",
+    "RelativePath": "api.bein.com/Sector/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.SectorController",
+    "Method": "GetSector",
+    "RelativePath": "api.bein.com/Sector/GetSector",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sectorName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

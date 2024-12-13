@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 
 namespace BEIN_DL.Models
 {
     public class SoftwareProduct
     {
         [Key]
+        [BindNever]
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Please provide the software's name.", AllowEmptyStrings = false)]
@@ -24,15 +26,17 @@ namespace BEIN_DL.Models
 
         [StringLength(5000, ErrorMessage = "A review must contain between 5 and 5000 characters.")]
         public string? Review { get; set; }
-
-        public List<SectorProduct>? Sectors { get; set; }
-
+        
         public string ProjectStage { get; set; }
 
         public List<string> Professions { get; set; }
 
+        #region Navigation Properties
+        public List<SectorProduct>? Sectors { get; set; }
+
         public List<Feature>? Features { get; set; }
 
         public List<Visit>? Visits { get; set; }
+        #endregion
     }
 }
