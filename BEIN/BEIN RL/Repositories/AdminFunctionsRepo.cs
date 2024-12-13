@@ -19,6 +19,10 @@ namespace BEIN_RL.Repositories
                 if (existingSector is not null) throw new($"A sector with the name '{sector.Title}' already exists.");
 
                 sector.Id = NewGuid().ToString();
+                sector.SectorInformation!.Id = NewGuid().ToString();
+                sector.SectorInformation.CardInformation!.ForEach(ci => ci.Id = NewGuid().ToString());
+                sector.SectorInformation.SectorPrinciples!.ForEach(sp => sp.Id = NewGuid().ToString());
+
                 await context.AddAsync(sector);
                 await context.SaveChangesAsync();
 

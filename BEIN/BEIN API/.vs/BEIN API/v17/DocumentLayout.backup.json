@@ -3,10 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0C2F2BD8-BAC6-47B0-A94A-105DEE5B36AB}|..\\BEIN DL\\BEIN DL.csproj|c:\\users\\lukhanyo\\desktop\\git repo\\bein\\bein\\bein dl\\models\\sectorinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36D5CD97-7C7B-490A-9F36-5F750DCD85F7}|..\\BEIN Web App\\BEIN Web App.csproj|c:\\users\\lukhanyo\\desktop\\git repo\\bein\\bein\\bein web app\\controllers\\adminfunctionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C2F2BD8-BAC6-47B0-A94A-105DEE5B36AB}|..\\BEIN DL\\BEIN DL.csproj|c:\\users\\lukhanyo\\desktop\\git repo\\bein\\bein\\bein dl\\models\\sectorinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C2F2BD8-BAC6-47B0-A94A-105DEE5B36AB}|..\\BEIN DL\\BEIN DL.csproj|c:\\users\\lukhanyo\\desktop\\git repo\\bein\\bein\\bein dl\\data\\beindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36D5CD97-7C7B-490A-9F36-5F750DCD85F7}|..\\BEIN Web App\\BEIN Web App.csproj|c:\\users\\lukhanyo\\desktop\\git repo\\bein\\bein\\bein web app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -19,24 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "BeinDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\Data\\BeinDbContext.cs",
+              "RelativeDocumentMoniker": "..\\BEIN DL\\Data\\BeinDbContext.cs",
+              "ToolTip": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\Data\\BeinDbContext.cs",
+              "RelativeToolTip": "..\\BEIN DL\\Data\\BeinDbContext.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowHwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T16:28:34.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AdminFunctionsController.cs",
               "DocumentMoniker": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\Controllers\\AdminFunctionsController.cs",
               "RelativeDocumentMoniker": "..\\BEIN Web App\\Controllers\\AdminFunctionsController.cs",
               "ToolTip": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\Controllers\\AdminFunctionsController.cs",
               "RelativeToolTip": "..\\BEIN Web App\\Controllers\\AdminFunctionsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T01:32:05.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\Program.cs",
               "RelativeDocumentMoniker": "..\\BEIN Web App\\Program.cs",
@@ -44,18 +60,17 @@
               "RelativeToolTip": "..\\BEIN Web App\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAUwBAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:30:53.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T01:30:53.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SectorInformation.cs",
               "DocumentMoniker": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\Models\\SectorInformation.cs",
               "RelativeDocumentMoniker": "..\\BEIN DL\\Models\\SectorInformation.cs",
               "ToolTip": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN DL\\Models\\SectorInformation.cs",
               "RelativeToolTip": "..\\BEIN DL\\Models\\SectorInformation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T01:06:29.597Z",
               "EditorCaption": ""

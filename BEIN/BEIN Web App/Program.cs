@@ -28,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=AdminFunctions}/{action=AddSector}/{id?}");
+    pattern: "{controller=General}/{action=LandingPage}/{id?}");
 
 app.Run();

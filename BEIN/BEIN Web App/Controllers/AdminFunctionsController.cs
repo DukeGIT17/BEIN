@@ -22,6 +22,7 @@ namespace BEIN_Web_App.Controllers
                 if (!ModelState.IsValid)
                     return View(sector);
 
+
                 _returnDictionary = requestService.SendRequestAsync(sector, HttpMethod.Post, "/AdminFunctions/AddSector").Result;
                 if (!(bool)_returnDictionary["Success"])
                 {

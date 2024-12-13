@@ -23,6 +23,9 @@ namespace BEIN_DL.Data
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<User>()
+                .HasKey(u => u.Id);
+
+            modelBuilder.Entity<User>()
                 .HasIndex(u => u.PhoneNumber)
                 .IsUnique();
             
@@ -35,6 +38,9 @@ namespace BEIN_DL.Data
                 .WithMany(visits => visits.Visits)
                 .HasForeignKey(visits => visits.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<SoftwareProduct>()
+                .HasKey(sp => sp.Id);
 
             modelBuilder.Entity<SoftwareProduct>()
                 .HasMany(features => features.Features)
@@ -65,6 +71,9 @@ namespace BEIN_DL.Data
                 .HasKey(v => new { v.UserId, v.SoftwareProductId });
 
             modelBuilder.Entity<Sector>()
+                .HasKey(s => s.Id);
+
+            modelBuilder.Entity<Sector>()
                 .HasMany(products => products.Products)
                 .WithOne(sector => sector.Sector)
                 .HasForeignKey(sector => sector.ProductId)
@@ -86,6 +95,9 @@ namespace BEIN_DL.Data
                 .HasKey(sp => new { sp.ProductId, sp.SectorId });
 
             modelBuilder.Entity<SectorInformation>()
+                .HasKey(si => si.Id);
+
+            modelBuilder.Entity<SectorInformation>()
                 .HasMany(ci => ci.CardInformation)
                 .WithOne(si => si.SectorInformation)
                 .HasForeignKey(ci => ci.SectorInformationId)
@@ -98,6 +110,15 @@ namespace BEIN_DL.Data
                 .HasForeignKey(sp => sp.SectorInformationId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
+
+            modelBuilder.Entity<CardInfo>()
+                .HasKey(ci => ci.Id);
+
+            modelBuilder.Entity<Feature>()
+                .HasKey(f => f.Id);
+
+            modelBuilder.Entity<SectorPrinciple>()
+                .HasKey(sp => sp.Id);
         }
     }
 }

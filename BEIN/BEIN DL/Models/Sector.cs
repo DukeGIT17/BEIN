@@ -6,7 +6,6 @@ namespace BEIN_DL.Models
     public class Sector
     {
         [Key]
-        
         public string Id { get; set; } = "";
 
         [Required(ErrorMessage = "Please provide a sector title.")]

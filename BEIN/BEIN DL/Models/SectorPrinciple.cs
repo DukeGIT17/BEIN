@@ -19,7 +19,7 @@ namespace BEIN_DL.Models
 
         #region Foreign Keys
         [ForeignKey(nameof(SectorInformation))]
-        public string SectorInformationId { get; set; }
+        public string SectorInformationId { get; set; } = "";
         #endregion
 
         #region Navigation Properties

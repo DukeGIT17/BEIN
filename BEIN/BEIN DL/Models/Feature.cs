@@ -19,7 +19,7 @@ namespace BEIN_DL.Models
 
         #region Foreign Keys
         [ForeignKey(nameof(SoftwareProduct))]
-        public string SoftwareProductId { get; set; }
+        public string SoftwareProductId { get; set; } = "";
         #endregion
 
         #region Navigation Properties
