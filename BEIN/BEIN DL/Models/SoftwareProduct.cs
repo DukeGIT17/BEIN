@@ -1,5 +1,6 @@
-﻿
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BEIN_DL.Models
 {
@@ -8,22 +9,30 @@ namespace BEIN_DL.Models
         [Key]
         public string Id { get; set; } = "";
 
-        [Required(ErrorMessage = "Please provide the software's name.", AllowEmptyStrings = false)]
+        [Display(Name = "Image Name")]
+        public string? ImageName { get; set; }
+
+        [NotMapped]
+        [Required(ErrorMessage = "Please provide a photo for the software.")]
+        [DataType(DataType.Upload)]
+        public IFormFile? ImageFile { get; set; }
+
+        [Required(ErrorMessage = "Please provide the software's name.")]
         [StringLength(100, ErrorMessage = "Names of softwares should be between 1 and 100 characters.")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Please provide the software's description.", AllowEmptyStrings = false)]
-        [StringLength(10000, ErrorMessage = "A description cannot be longer than 10000 characters.")]
+        [Required(ErrorMessage = "Please provide the software's description.")]
+        [StringLength(700, ErrorMessage = "A description cannot be longer than 700 characters.")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "Please provide the vendor's name.", AllowEmptyStrings = false)]
+        [Required(ErrorMessage = "Please provide the vendor's name.")]
         [Display(Name = "Vendor Name")]
         [StringLength(100, ErrorMessage = "Vendor name cannot be greater than 100 characters.")]
         public string Vendor { get; set; }
 
         public int Rating { get; set; }
 
-        [StringLength(5000, ErrorMessage = "A review must contain between 5 and 5000 characters.")]
+        [StringLength(2500, ErrorMessage = "A review must contain between 5 and 2500 characters.")]
         public string? Review { get; set; }
         
         public string ProjectStage { get; set; }

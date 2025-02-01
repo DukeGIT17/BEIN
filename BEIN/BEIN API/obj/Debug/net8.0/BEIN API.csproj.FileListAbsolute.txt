@@ -256,9 +256,6 @@ C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
@@ -293,3 +290,30 @@ C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\obj\Debug\net8.0\refint\BE
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\obj\Debug\net8.0\BEIN API.pdb
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\obj\Debug\net8.0\BEIN API.genruntimeconfig.cache
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\obj\Debug\net8.0\ref\BEIN API.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Shared Library.pdb
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\EPPlus.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

@@ -1,0 +1,198 @@
+﻿body {
+    background-color: var(--secondary-bg-color);
+}
+
+#add-software {
+    padding: 7rem 5rem 2rem 5rem;
+}
+
+#add-software > form {
+    position: relative;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+#top-fields {
+    display: flex;
+    gap: 3rem;
+}
+
+#upload-alert {
+    display: none;
+    position: absolute;
+    top: 5px;
+    font-size: 15px;
+}
+
+#left-form-fields, #right-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40vw;
+}
+
+#photo-and-name-fields {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 40vw;
+}
+
+#photo-and-name-fields > button {
+    width: 3rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    place-self: center;
+    cursor: pointer;
+}
+
+#photo-and-name-fields > button:hover {
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+#photo {
+    display: none;
+}
+
+input, textarea {
+    height: 2.5rem;
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+#description {
+    height: 75%;
+}
+
+#bottom-fields > #fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#bottom-fields {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#fields {
+    width: 95%;
+}
+
+#add-feature-btn {
+    height: 5.9rem;
+    width: 3.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--nav-text-color);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: larger;
+}
+
+#add-feature-btn:hover {
+    opacity: .8;
+}
+
+#form-submission-btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: var(--nav-text-color);
+    font-weight: bold;
+}
+
+#added-features > .feature {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    opacity: .5;
+    border: 1px solid #ccc;
+    padding: .3rem;
+}
+
+.feature-data {
+    width: 95%;
+}
+
+.feature > button {
+    width: 3.5rem;
+    border: none;
+    background-color: red;
+    font-size: larger;
+    color: var(--nav-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bulk-addition {
+    padding: 2rem 5rem 5rem 5rem;
+    ;
+}
+
+#bulk-addition > form {
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#bulk-upload {
+    display: none;
+}
+
+#upload-section {
+    width: 70%;
+    height: 10rem;
+    background-color: var(--secondary-bg-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    cursor: pointer;
+}
+
+#upload-section:hover {
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+#upload-section > p {
+    font-size: small;
+}
+
+#submit {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    width: 10rem;
+    height: 3rem;
+    color: var(--nav-text-color);
+    font-weight: bolder;
+}

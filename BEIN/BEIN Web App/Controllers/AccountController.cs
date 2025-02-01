@@ -29,12 +29,13 @@ namespace BEIN_Web_App.Controllers
                 {
                     _returnDictionary = requestService.SendRequestAsync(model.RegistrationModel, HttpMethod.Post, "/Account/Register").Result;
                     if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("LandingPage", "General");
                 }
                 return View("SignInOrRegister", model);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine($"\n\n{ex.Message.ToUpper()}\n\n");
                 return RedirectToAction("Error", "Home");
             }
         }
@@ -52,26 +53,27 @@ namespace BEIN_Web_App.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    _returnDictionary = requestService.SendRequestAsync(model.SignInModel, HttpMethod.Post, "/Account/SignIn").Result;
+                    _returnDictionary = requestService.SignInRequestAsync(model.SignInModel).Result;
                     if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
-                    return RedirectToAction("landingPage", "General");
+                    return RedirectToAction("LandingPage", "General");
                 }
                 return View("SignInOrRegister", model);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine($"\n\n{ex.Message.ToUpper()}\n\n");
                 return RedirectToAction("Error", "Home");
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         public new IActionResult SignOut()
         {
             try
             {
-                _returnDictionary = requestService.GetRequestAsync("/Account/SignOut").Result;
-                if (!(bool)_returnDictionary["Success"]) throw new($"Critical Error, failed to log user '{HttpContext.User.Identity?.Name ?? "<No User>"}' out.");
-                return RedirectToAction(nameof(SignInOrRegister));
+                _returnDictionary = requestService.SignOutRequestAsync().Result;
+                if (!(bool)_returnDictionary["Success"]) throw new($"Critical Error!! User sign out may have failed.\n{_returnDictionary["ErrorMessage"]}");
+                return RedirectToAction("LandingPage", "General");
             }
             catch (Exception ex)
             {

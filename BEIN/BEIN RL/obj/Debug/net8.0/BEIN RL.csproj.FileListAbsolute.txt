@@ -33,3 +33,5 @@ C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN RL\obj\Debug\net8.0\refint\BEI
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.pdb
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN RL\obj\Debug\net8.0\BEIN RL.genruntimeconfig.cache
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN RL\obj\Debug\net8.0\ref\BEIN RL.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN RL\bin\Debug\net8.0\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN RL\bin\Debug\net8.0\Shared Library.pdb

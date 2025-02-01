@@ -6,6 +6,5 @@ namespace BEIN_ServerSide_SL.IServerSideServices
     {
         Task<Dictionary<string, object>> RegisterUserAsync(RegistrationModel model);
         Task<Dictionary<string, object>> SignInAsync(SignInModel model);
-        Task<Dictionary<string, object>> SignOutAsync();
     }
 }

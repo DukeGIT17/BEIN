@@ -2,6 +2,9 @@
 using BEIN_DL.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using static System.Console;
+using Shared_Library.GlobalUtilities;
 
 namespace BEIN_API.UtilityPrograms
 {
@@ -13,6 +16,7 @@ namespace BEIN_API.UtilityPrograms
             var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
             var context = scope.ServiceProvider.GetRequiredService<BeinDbContext>();
+            string? errorMessage = null;
 
             var roles = new[] { "System Admin", "User" };
             foreach (var role in roles)
@@ -23,7 +27,7 @@ namespace BEIN_API.UtilityPrograms
 
             User[] admins =
             [
-                new User 
+                new User
                 {
                     Name = "Lukhanyo",
                     Surname = "Mayekiso",
@@ -51,17 +55,19 @@ namespace BEIN_API.UtilityPrograms
                         PhoneNumber = admin.PhoneNumber
                     };
 
+                    Claim[] claims =
+                    [
+                        new(ClaimTypes.Name, admin.Name),
+                        new(ClaimTypes.Surname, admin.Surname),
+                        new("username", $"{admin.Name} {admin.Surname}"),
+                        new(ClaimTypes.Email, admin.Email),
+                        new(ClaimTypes.MobilePhone, admin.PhoneNumber!),
+                        new(ClaimTypes.Role, "Admin")
+                    ];
 
-                    var result = await userManager.CreateAsync(sysAdmin, "Admin101!");
-                    if (!result.Succeeded)
-                    {
-                        List<string> errors = [];
-                        result.Errors.ToList().ForEach(error => errors.Add($"{error.Code}: {error.Description}"));
-                        Console.WriteLine("\n\nAdmin account creation failed.\nErrors: " + string.Join("\n", errors) + "\n\n");
-                    }
-
-                    result = await userManager.AddToRoleAsync(sysAdmin, "System Admin");
-                    if (!result.Succeeded) Console.WriteLine("Failed to add user to the admin role." + string.Join("\n", result.Errors));
+                    if (!StaticUtilites.IdentityOutcome(await userManager.CreateAsync(sysAdmin, "Admin101!"), out errorMessage)) WriteLine(errorMessage);
+                    if (!StaticUtilites.IdentityOutcome(await userManager.AddClaimsAsync(sysAdmin, claims), out errorMessage)) WriteLine(errorMessage);
+                    if (!StaticUtilites.IdentityOutcome(await userManager.AddToRoleAsync(sysAdmin, "System Admin"), out errorMessage)) WriteLine(errorMessage);
 
                     var user = await context.Users.FirstOrDefaultAsync(u => u.Email == admin.Email);
                     if (user is null)

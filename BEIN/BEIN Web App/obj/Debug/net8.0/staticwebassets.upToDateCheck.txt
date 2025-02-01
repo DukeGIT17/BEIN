@@ -1,3 +1,4 @@
+wwwroot\css\admin function pages css\add_software.css
 wwwroot\css\general pages css\about_us.css
 wwwroot\css\general pages css\contact_us.css
 wwwroot\css\general pages css\landing_page.css
@@ -2212,46 +2213,18 @@ wwwroot\fonts\Inter\static\Inter_28pt-SemiBold.ttf
 wwwroot\fonts\Inter\static\Inter_28pt-SemiBoldItalic.ttf
 wwwroot\fonts\Inter\static\Inter_28pt-Thin.ttf
 wwwroot\fonts\Inter\static\Inter_28pt-ThinItalic.ttf
-wwwroot\images\ai.jpg
-wwwroot\images\all built environment engineering.png
-wwwroot\images\ArchiCAD.jpeg
-wwwroot\images\archicad.jpg
-wwwroot\images\architecture.jpeg
-wwwroot\images\argus.png
-wwwroot\images\autocad civil 3d.png
-wwwroot\images\autodesk-logo-on-dark-background-600nw-2319624897.webp
-wwwroot\images\autodeskRevPic.jpg
-wwwroot\images\banner_img.jpg
-wwwroot\images\cad1.jpg
-wwwroot\images\Caddie Square.jpeg
-wwwroot\images\Caddie.jpeg
-wwwroot\images\caddie.jpg
-wwwroot\images\engine.png
-wwwroot\images\environmental assessment.jpeg
-wwwroot\images\etabs.jpeg
-wwwroot\images\geomatics.jpeg
-wwwroot\images\land surveyor.jpeg
-wwwroot\images\landscaping (2).jpeg
-wwwroot\images\landscaping.jpeg
-wwwroot\images\lumion.png
-wwwroot\images\matterport.jpg
-wwwroot\images\matterport.png
-wwwroot\images\micromine.png
-wwwroot\images\project and construction management.jpeg
-wwwroot\images\prokon.png
-wwwroot\images\property and construction management.jpeg
-wwwroot\images\property valuers.jpeg
-wwwroot\images\quantity surveying.jpeg
-wwwroot\images\redbook.png
-wwwroot\images\sketchUp.jpg
-wwwroot\images\sketchup.png
-wwwroot\images\surpac.jpeg
-wwwroot\images\Tekla 2.jpeg
-wwwroot\images\Tekla.png
-wwwroot\images\town and regional planning.jpeg
-wwwroot\images\winqs.png
+wwwroot\images\dev1.jpeg
+wwwroot\images\dev2.jpeg
+wwwroot\images\dev3.jpeg
+wwwroot\images\dev4.jpeg
+wwwroot\images\founder.jpeg
+wwwroot\images\lead-dev.jpeg
+wwwroot\images\mob-dev.jpeg
+wwwroot\js\admin function pages js\add_software.js
 wwwroot\js\general pages js\about_us.js
+wwwroot\js\general pages js\landing_page.js
 wwwroot\js\layout js\layout.js
+wwwroot\js\sector js\sector.js
 wwwroot\js\sign-in js\sign-in.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

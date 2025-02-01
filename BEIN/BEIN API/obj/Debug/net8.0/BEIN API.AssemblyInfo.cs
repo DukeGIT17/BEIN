@@ -12,10 +12,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("b6b9622b-f3b3-48d7-af47-7ab383089209")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BEIN API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+195d4f4f704cabf54a50119b82cbb3fdcaa8880b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f552b17e0f365e104d14020bbfa483b3abc8aa70")]
 [assembly: System.Reflection.AssemblyProductAttribute("BEIN API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BEIN API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

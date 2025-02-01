@@ -29,8 +29,14 @@ namespace BEIN_RL.Repositories
         {
             try
             {
-                var sector = await context.Sectors.FirstOrDefaultAsync(s => s.Title == sectorName);
+                var sector = await context.Sectors
+                    .AsNoTracking()
+                    //.Include(si => si.SectorInformation)
+                    //.ThenInclude(ci => ci.CardInformation)
+                    .FirstOrDefaultAsync(s => s.Title == sectorName);
                 if (sector is null) throw new($"Could not find a sector with the name {sectorName}.");
+
+                //sector.SectorInformation!.SectorPrinciples = await context.SectorPrinciple.Where(sp => sp.SectorInformationId == sector.SectorInformation.Id).ToListAsync();
 
                 _returnDictionary["Success"] = true;
                 _returnDictionary["Result"] = sector;

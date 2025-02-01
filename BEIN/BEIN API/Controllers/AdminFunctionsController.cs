@@ -39,5 +39,20 @@ namespace BEIN_API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPost(nameof(BulkSoftwareUpload))]
+        public IActionResult BulkSoftwareUpload(IFormFile file)
+        {
+            try
+            {
+                _returnDictionary = adminFunctionsService.BulkSoftwareUpload(file).Result;
+                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

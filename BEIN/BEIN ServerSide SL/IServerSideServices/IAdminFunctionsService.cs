@@ -1,4 +1,5 @@
 ﻿using BEIN_DL.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace BEIN_ServerSide_SL.IServerSideServices
 {
@@ -6,5 +7,6 @@ namespace BEIN_ServerSide_SL.IServerSideServices
     {
         Task<Dictionary<string, object>> AddSectorAsync(Sector sector);
         Task<Dictionary<string, object>> AddSoftwareProduct(SoftwareProduct product);
+        Task<Dictionary<string, object>> BulkSoftwareUpload(IFormFile file);
     }
 }

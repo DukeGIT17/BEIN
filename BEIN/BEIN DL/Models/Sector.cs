@@ -9,16 +9,20 @@ namespace BEIN_DL.Models
         public string Id { get; set; } = "";
 
         [Required(ErrorMessage = "Please provide a sector title.")]
-        [StringLength(250, ErrorMessage = "Sector titles should not be greater than 250 characters.")]
+        [StringLength(50, ErrorMessage = "Sector titles should not be greater than 50 characters.")]
         public string Title { get; set; }
 
+        [Required(ErrorMessage = "Please provide a short sector description")]
+        [Display(Name = "Short Description")]
+        [StringLength(110, ErrorMessage = "Short sector description should not be greater than 110 characters.")]
+        public string ShortDescription { get; set; }
+
         [Required(ErrorMessage = "Please provide a sector description..")]
-        [StringLength(5000, ErrorMessage = "Sector description should not be greater than 5000 characters.")]
+        [StringLength(700, ErrorMessage = "Sector description should not be greater than 700 characters.")]
         public string Description { get; set; }
 
         #region Navigation Properties
         public List<SectorProduct>? Products { get; set; }
-        public SectorInformation? SectorInformation { get; set; }
         #endregion
     }
 }

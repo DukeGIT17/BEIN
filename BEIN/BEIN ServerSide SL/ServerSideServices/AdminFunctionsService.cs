@@ -1,6 +1,7 @@
 ﻿using BEIN_DL.Models;
 using BEIN_RL.IRepositories;
 using BEIN_ServerSide_SL.IServerSideServices;
+using Microsoft.AspNetCore.Http;
 
 namespace BEIN_ServerSide_SL.ServerSideServices
 {
@@ -27,6 +28,20 @@ namespace BEIN_ServerSide_SL.ServerSideServices
             try
             {
                 return await adminFunctions.AddSoftwareProductAsync(product);
+            }
+            catch (Exception ex)
+            {
+                _returnDictionary["Success"] = false;
+                _returnDictionary["ErrorMessage"] = ex.Message;
+                return _returnDictionary;
+            }
+        }
+
+        public async Task<Dictionary<string, object>> BulkSoftwareUpload(IFormFile file)
+        {
+            try
+            {
+                return await adminFunctions.BulkSoftwareUploadAsync(file);
             }
             catch (Exception ex)
             {

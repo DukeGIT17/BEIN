@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\RemixIcon\\fonts\\unicode.html"
     },
     {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\admin function pages css\\add_software.css",
+      "PackagePath": "staticwebassets\\css\\admin function pages css\\add_software.css"
+    },
+    {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\about_us.css",
       "PackagePath": "staticwebassets\\css\\general pages css\\about_us.css"
     },
@@ -8921,164 +8925,52 @@
       "PackagePath": "staticwebassets\\fonts\\Inter\\static\\Inter_28pt-ThinItalic.ttf"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\ArchiCAD.jpeg",
-      "PackagePath": "staticwebassets\\images\\ArchiCAD.jpeg"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\dev1.jpeg",
+      "PackagePath": "staticwebassets\\images\\dev1.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\Caddie Square.jpeg",
-      "PackagePath": "staticwebassets\\images\\Caddie Square.jpeg"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\dev2.jpeg",
+      "PackagePath": "staticwebassets\\images\\dev2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\Caddie.jpeg",
-      "PackagePath": "staticwebassets\\images\\Caddie.jpeg"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\dev3.jpeg",
+      "PackagePath": "staticwebassets\\images\\dev3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\Tekla 2.jpeg",
-      "PackagePath": "staticwebassets\\images\\Tekla 2.jpeg"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\dev4.jpeg",
+      "PackagePath": "staticwebassets\\images\\dev4.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\Tekla.png",
-      "PackagePath": "staticwebassets\\images\\Tekla.png"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\founder.jpeg",
+      "PackagePath": "staticwebassets\\images\\founder.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\ai.jpg",
-      "PackagePath": "staticwebassets\\images\\ai.jpg"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\lead-dev.jpeg",
+      "PackagePath": "staticwebassets\\images\\lead-dev.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\all built environment engineering.png",
-      "PackagePath": "staticwebassets\\images\\all built environment engineering.png"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\mob-dev.jpeg",
+      "PackagePath": "staticwebassets\\images\\mob-dev.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\archicad.jpg",
-      "PackagePath": "staticwebassets\\images\\archicad.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\architecture.jpeg",
-      "PackagePath": "staticwebassets\\images\\architecture.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\argus.png",
-      "PackagePath": "staticwebassets\\images\\argus.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\autocad civil 3d.png",
-      "PackagePath": "staticwebassets\\images\\autocad civil 3d.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\autodesk-logo-on-dark-background-600nw-2319624897.webp",
-      "PackagePath": "staticwebassets\\images\\autodesk-logo-on-dark-background-600nw-2319624897.webp"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\autodeskRevPic.jpg",
-      "PackagePath": "staticwebassets\\images\\autodeskRevPic.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\banner_img.jpg",
-      "PackagePath": "staticwebassets\\images\\banner_img.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\cad1.jpg",
-      "PackagePath": "staticwebassets\\images\\cad1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\caddie.jpg",
-      "PackagePath": "staticwebassets\\images\\caddie.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\engine.png",
-      "PackagePath": "staticwebassets\\images\\engine.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\environmental assessment.jpeg",
-      "PackagePath": "staticwebassets\\images\\environmental assessment.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\etabs.jpeg",
-      "PackagePath": "staticwebassets\\images\\etabs.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\geomatics.jpeg",
-      "PackagePath": "staticwebassets\\images\\geomatics.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\land surveyor.jpeg",
-      "PackagePath": "staticwebassets\\images\\land surveyor.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\landscaping (2).jpeg",
-      "PackagePath": "staticwebassets\\images\\landscaping (2).jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\landscaping.jpeg",
-      "PackagePath": "staticwebassets\\images\\landscaping.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\lumion.png",
-      "PackagePath": "staticwebassets\\images\\lumion.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\matterport.jpg",
-      "PackagePath": "staticwebassets\\images\\matterport.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\matterport.png",
-      "PackagePath": "staticwebassets\\images\\matterport.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\micromine.png",
-      "PackagePath": "staticwebassets\\images\\micromine.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\project and construction management.jpeg",
-      "PackagePath": "staticwebassets\\images\\project and construction management.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\prokon.png",
-      "PackagePath": "staticwebassets\\images\\prokon.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\property and construction management.jpeg",
-      "PackagePath": "staticwebassets\\images\\property and construction management.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\property valuers.jpeg",
-      "PackagePath": "staticwebassets\\images\\property valuers.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\quantity surveying.jpeg",
-      "PackagePath": "staticwebassets\\images\\quantity surveying.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\redbook.png",
-      "PackagePath": "staticwebassets\\images\\redbook.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\sketchUp.jpg",
-      "PackagePath": "staticwebassets\\images\\sketchUp.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\sketchup.png",
-      "PackagePath": "staticwebassets\\images\\sketchup.png"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\surpac.jpeg",
-      "PackagePath": "staticwebassets\\images\\surpac.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\town and regional planning.jpeg",
-      "PackagePath": "staticwebassets\\images\\town and regional planning.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\images\\winqs.png",
-      "PackagePath": "staticwebassets\\images\\winqs.png"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\admin function pages js\\add_software.js",
+      "PackagePath": "staticwebassets\\js\\admin function pages js\\add_software.js"
     },
     {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\general pages js\\about_us.js",
       "PackagePath": "staticwebassets\\js\\general pages js\\about_us.js"
     },
     {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\general pages js\\landing_page.js",
+      "PackagePath": "staticwebassets\\js\\general pages js\\landing_page.js"
+    },
+    {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\layout js\\layout.js",
       "PackagePath": "staticwebassets\\js\\layout js\\layout.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\sector js\\sector.js",
+      "PackagePath": "staticwebassets\\js\\sector js\\sector.js"
     },
     {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\sign-in js\\sign-in.js",

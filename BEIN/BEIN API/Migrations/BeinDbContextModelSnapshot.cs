@@ -21,32 +21,6 @@ namespace BEIN_API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BEIN_DL.Models.CardInfo", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Header")
-                        .IsRequired()
-                        .HasMaxLength(35)
-                        .HasColumnType("nvarchar(35)");
-
-                    b.Property<string>("Information")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("SectorInformationId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SectorInformationId");
-
-                    b.ToTable("CardInfo");
-                });
-
             modelBuilder.Entity("BEIN_DL.Models.Feature", b =>
                 {
                     b.Property<string>("Id")
@@ -80,13 +54,18 @@ namespace BEIN_API.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(5000)
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(700)
+                        .HasColumnType("nvarchar(700)");
+
+                    b.Property<string>("ShortDescription")
+                        .IsRequired()
+                        .HasMaxLength(110)
+                        .HasColumnType("nvarchar(110)");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -94,54 +73,6 @@ namespace BEIN_API.Migrations
                         .IsUnique();
 
                     b.ToTable("Sectors");
-                });
-
-            modelBuilder.Entity("BEIN_DL.Models.SectorInformation", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Header")
-                        .IsRequired()
-                        .HasMaxLength(35)
-                        .HasColumnType("nvarchar(35)");
-
-                    b.Property<string>("SectorId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SectorId")
-                        .IsUnique();
-
-                    b.ToTable("SectorInformation");
-                });
-
-            modelBuilder.Entity("BEIN_DL.Models.SectorPrinciple", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Principle")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("SectorInformationId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SectorInformationId");
-
-                    b.ToTable("SectorPrinciple");
                 });
 
             modelBuilder.Entity("BEIN_DL.Models.SectorProduct", b =>
@@ -174,7 +105,10 @@ namespace BEIN_API.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(10000)
+                        .HasMaxLength(700)
+                        .HasColumnType("nvarchar(700)");
+
+                    b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -194,8 +128,8 @@ namespace BEIN_API.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Review")
-                        .HasMaxLength(5000)
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(2500)
+                        .HasColumnType("nvarchar(2500)");
 
                     b.Property<string>("Vendor")
                         .IsRequired()
@@ -275,17 +209,6 @@ namespace BEIN_API.Migrations
                     b.ToTable("Visits");
                 });
 
-            modelBuilder.Entity("BEIN_DL.Models.CardInfo", b =>
-                {
-                    b.HasOne("BEIN_DL.Models.SectorInformation", "SectorInformation")
-                        .WithMany("CardInformation")
-                        .HasForeignKey("SectorInformationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SectorInformation");
-                });
-
             modelBuilder.Entity("BEIN_DL.Models.Feature", b =>
                 {
                     b.HasOne("BEIN_DL.Models.SoftwareProduct", "SoftwareProduct")
@@ -295,28 +218,6 @@ namespace BEIN_API.Migrations
                         .IsRequired();
 
                     b.Navigation("SoftwareProduct");
-                });
-
-            modelBuilder.Entity("BEIN_DL.Models.SectorInformation", b =>
-                {
-                    b.HasOne("BEIN_DL.Models.Sector", "Sector")
-                        .WithOne("SectorInformation")
-                        .HasForeignKey("BEIN_DL.Models.SectorInformation", "SectorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Sector");
-                });
-
-            modelBuilder.Entity("BEIN_DL.Models.SectorPrinciple", b =>
-                {
-                    b.HasOne("BEIN_DL.Models.SectorInformation", "SectorInformation")
-                        .WithMany("SectorPrinciples")
-                        .HasForeignKey("SectorInformationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SectorInformation");
                 });
 
             modelBuilder.Entity("BEIN_DL.Models.SectorProduct", b =>
@@ -360,15 +261,6 @@ namespace BEIN_API.Migrations
             modelBuilder.Entity("BEIN_DL.Models.Sector", b =>
                 {
                     b.Navigation("Products");
-
-                    b.Navigation("SectorInformation");
-                });
-
-            modelBuilder.Entity("BEIN_DL.Models.SectorInformation", b =>
-                {
-                    b.Navigation("CardInformation");
-
-                    b.Navigation("SectorPrinciples");
                 });
 
             modelBuilder.Entity("BEIN_DL.Models.SoftwareProduct", b =>

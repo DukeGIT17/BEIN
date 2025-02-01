@@ -1,4 +1,5 @@
 ﻿using BEIN_ServerSide_SL.IServerSideServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BEIN_API.Controllers
@@ -12,7 +13,7 @@ namespace BEIN_API.Controllers
         [HttpGet(nameof(GetAll))]
         public IActionResult GetAll()
         {
-            try
+            try                                                      
             {
                 _returnDictionary = sectorService.GetAllAsync().Result;
                 if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);

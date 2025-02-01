@@ -47,19 +47,5 @@ namespace BEIN_ServerSide_SL.ServerSideServices
                 return _returnDictionary;
             }
         }
-
-        public async Task<Dictionary<string, object>> SignOutAsync()
-        {
-            try
-            {
-                return await account.SignOutAsync();
-            }
-            catch (Exception ex)
-            {
-                _returnDictionary["Success"] = false;
-                _returnDictionary["ErrorMessage"] = ex.Message + "\nInner Exception: " + ex.InnerException;
-                return _returnDictionary;
-            }
-        }
     }
 }

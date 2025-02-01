@@ -3,19 +3,19 @@
     Layout = "_Layout";
     ViewData["Title"] = "Add Sector";
 
-    Model.SectorInformation = new();
-    Model.SectorInformation.CardInformation = 
-    [
-        new(),
-        new(),
-        new()
-    ];
-    Model.SectorInformation.SectorPrinciples = 
-    [
-        new(),
-        new(),
-        new()
-    ];
+    // Model.SectorInformation = new();
+    // Model.SectorInformation.CardInformation = 
+    // [
+    //     new(),
+    //     new(),
+    //     new()
+    // ];
+    // Model.SectorInformation.SectorPrinciples = 
+    // [
+    //     new(),
+    //     new(),
+    //     new()
+    // ];
 }
 
 <link rel="stylesheet" href="~/css/temp.css" />
@@ -29,30 +29,30 @@
             <input asp-for="Title" placeholder="Enter sector title" />
         </div>
         <div>
-            <label asp-for="SectorInformation.Header">Sector Header</label><br />
-            <input asp-for="SectorInformation.Header" placeholder="Enter sector header" />
+            @* <label asp-for="SectorInformation.Header">Sector Header</label><br />
+            <input asp-for="SectorInformation.Header" placeholder="Enter sector header" /> *@
         </div>
         <div>
             <label asp-for="Description">Sector Description</label><br />
             <textarea asp-for="Description" placeholder="Enter sector Description"></textarea>
         </div>
         <div>
-            @for (int i = 1; i <= Model.SectorInformation.CardInformation.Count; i++) 
+            @* @for (int i = 1; i <= Model.SectorInformation.CardInformation.Count; i++) 
             {
                 <label asp-for="SectorInformation.CardInformation[i - 1].Header">Card @i Header</label><br />
                 <input asp-for="SectorInformation.CardInformation[i - 1].Header" placeholder="Enter card @i header" /><br /><br />
                 <label asp-for="SectorInformation.CardInformation[i - 1].Information">Card @i Information</label><br />
                 <textarea asp-for="SectorInformation.CardInformation[i - 1].Information" placeholder="Enter card @i Information"></textarea>
-            }
+            } *@
         </div>
         <div>
-            @for (int i = 1; i <= Model.SectorInformation.SectorPrinciples.Count; i++) 
+            @* @for (int i = 1; i <= Model.SectorInformation.SectorPrinciples.Count; i++) 
             {
                 <label asp-for="SectorInformation.SectorPrinciples[i - 1].Principle">Principle @i</label><br />
                 <input asp-for="SectorInformation.SectorPrinciples[i - 1].Principle" placeholder="Enter principle @i"><br /><br />
                 <label asp-for="SectorInformation.SectorPrinciples[i - 1].Description">Principle @i Description</label><br />
                 <textarea asp-for="SectorInformation.SectorPrinciples[i - 1].Description" placeholder="Enter principle @i description"></textarea>
-            }
+            } *@
         </div>
         <div>
             <button type="submit">Submit</button>

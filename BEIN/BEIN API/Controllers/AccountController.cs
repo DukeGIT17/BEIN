@@ -6,7 +6,7 @@ namespace BEIN_API.Controllers
 {
     [Route("api.bein.com/[controller]")]
     [ApiController]
-    public class AccountController(IAccountService accountService) : ControllerBase
+    public class AccountController(IAccountService accountService, IConfiguration configuration) : ControllerBase
     {
         private Dictionary<string, object> _returnDictionary = [];
 
@@ -32,7 +32,14 @@ namespace BEIN_API.Controllers
             {
                 _returnDictionary = accountService.SignInAsync(model).Result;
                 if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
-                return Ok();
+                HttpContext.Response.Cookies.Append("AuthToken", _returnDictionary["Token"].ToString()!, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    Expires = DateTime.UtcNow.AddMinutes(configuration.GetValue<int>("JwtSettings:ExpirationInMinutes"))
+                });
+                return Ok(_returnDictionary["UserClaims"]);
             }
             catch (Exception ex)
             {
@@ -40,13 +47,19 @@ namespace BEIN_API.Controllers
             }
         }
 
-        [HttpPost(nameof(SignOut))]
+        [HttpGet(nameof(SignOut))]
         public new IActionResult SignOut()
         {
             try
             {
-                _returnDictionary = accountService.SignOutAsync().Result;
-                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+                var val = HttpContext.Response.Headers.SetCookie;
+                HttpContext.Response.Cookies.Append("AuthToken", string.Empty, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    Expires = DateTime.UtcNow.AddDays(-1)
+                });
                 return Ok();
             }
             catch (Exception ex)

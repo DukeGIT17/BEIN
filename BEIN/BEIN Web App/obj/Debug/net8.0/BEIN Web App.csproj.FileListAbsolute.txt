@@ -285,3 +285,4 @@ C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\obj\Debug\net8.0\refin
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\obj\Debug\net8.0\BEIN Web App.pdb
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\obj\Debug\net8.0\BEIN Web App.genruntimeconfig.cache
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\obj\Debug\net8.0\ref\BEIN Web App.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

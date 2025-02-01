@@ -1,6 +1,5 @@
 ﻿using BEIN_DL.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Text;
 
 namespace BEIN_DL.Data
 {
@@ -81,44 +80,14 @@ namespace BEIN_DL.Data
                 .IsRequired();
 
             modelBuilder.Entity<Sector>()
-                .HasOne(sectorInfo => sectorInfo.SectorInformation)
-                .WithOne(sector => sector.Sector)
-                .HasForeignKey<SectorInformation>(s => s.SectorId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
-
-            modelBuilder.Entity<Sector>()
                 .HasIndex(s => s.Title)
                 .IsUnique();
 
             modelBuilder.Entity<SectorProduct>()
                 .HasKey(sp => new { sp.ProductId, sp.SectorId });
 
-            modelBuilder.Entity<SectorInformation>()
-                .HasKey(si => si.Id);
-
-            modelBuilder.Entity<SectorInformation>()
-                .HasMany(ci => ci.CardInformation)
-                .WithOne(si => si.SectorInformation)
-                .HasForeignKey(ci => ci.SectorInformationId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
-
-            modelBuilder.Entity<SectorInformation>()
-                .HasMany(sp => sp.SectorPrinciples)
-                .WithOne(si => si.SectorInformation)
-                .HasForeignKey(sp => sp.SectorInformationId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
-
-            modelBuilder.Entity<CardInfo>()
-                .HasKey(ci => ci.Id);
-
             modelBuilder.Entity<Feature>()
                 .HasKey(f => f.Id);
-
-            modelBuilder.Entity<SectorPrinciple>()
-                .HasKey(sp => sp.Id);
         }
     }
 }

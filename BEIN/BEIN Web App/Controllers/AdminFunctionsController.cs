@@ -43,7 +43,19 @@ namespace BEIN_Web_App.Controllers
         [HttpGet]
         public IActionResult AddSoftware()
         {
-            return View();
+            try
+            {
+                _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+                if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
+                ViewBag.sectors = sectors;
+                return View();
+            }
+            catch (Exception ex)
+            {
+                logger.LogCritical(ex, ex.Message);
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         [HttpPost]
@@ -54,13 +66,17 @@ namespace BEIN_Web_App.Controllers
                 if (!ModelState.IsValid)
                     return View(software);
 
-                software.Sectors =
-                [
-                    new()
-                    {
-                        SectorTitle = HttpContext.Request.Form["sector"]!.ToString()
-                    }
-                ];
+                software.Sectors = [];
+                HttpContext.Request.Form["sector"]!.ToString()
+                    .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(s => s.Trim())
+                    .ToList()
+                    .ForEach(t => software.Sectors.Add(new()
+                        {
+                            SectorTitle = t,
+                            ProductName = software.Name
+                        }
+                    ));
 
                 _returnDictionary = requestService.SendRequestAsync(software, HttpMethod.Post, "/AdminFunctions/AddSoftwareProduct").Result;
                 if (!(bool)_returnDictionary["Success"])

@@ -37,3 +37,5 @@ C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN ServerSide SL\obj\Debug\net8.0
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN ServerSide SL\obj\Debug\net8.0\BEIN ServerSide SL.pdb
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN ServerSide SL\obj\Debug\net8.0\BEIN ServerSide SL.genruntimeconfig.cache
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN ServerSide SL\obj\Debug\net8.0\ref\BEIN ServerSide SL.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN ServerSide SL\bin\Debug\net8.0\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN ServerSide SL\bin\Debug\net8.0\Shared Library.pdb
