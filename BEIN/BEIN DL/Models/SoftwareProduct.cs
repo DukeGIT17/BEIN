@@ -7,13 +7,12 @@ namespace BEIN_DL.Models
     public class SoftwareProduct
     {
         [Key]
-        public string Id { get; set; } = "";
+        public string Id { get; set; } = Guid.NewGuid().ToString();
 
         [Display(Name = "Image Name")]
         public string? ImageName { get; set; }
 
         [NotMapped]
-        [Required(ErrorMessage = "Please provide a photo for the software.")]
         [DataType(DataType.Upload)]
         public IFormFile? ImageFile { get; set; }
 

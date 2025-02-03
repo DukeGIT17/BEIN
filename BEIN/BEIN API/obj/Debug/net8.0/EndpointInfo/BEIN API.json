@@ -229,9 +229,6 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": [
-                  "ImageFile"
-                ],
                 "type": "object",
                 "properties": {
                   "ImageFile": {
@@ -280,6 +277,75 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Files/SaveFile": {
+      "post": {
+        "tags": [
+          "Files"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Files/DeleteFile": {
+      "delete": {
+        "tags": [
+          "Files"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -474,7 +540,6 @@
       "SoftwareProduct": {
         "required": [
           "description",
-          "imageFile",
           "name",
           "vendor"
         ],
@@ -490,7 +555,8 @@
           },
           "imageFile": {
             "type": "string",
-            "format": "binary"
+            "format": "binary",
+            "nullable": true
           },
           "name": {
             "maxLength": 100,

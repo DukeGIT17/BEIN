@@ -150,6 +150,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BEIN_API.Controllers.FilesController",
+    "Method": "DeleteFile",
+    "RelativePath": "api.bein.com/Files/DeleteFile",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.FilesController",
+    "Method": "SaveFile",
+    "RelativePath": "api.bein.com/Files/SaveFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BEIN_API.Controllers.SectorController",
     "Method": "GetAll",
     "RelativePath": "api.bein.com/Sector/GetAll",

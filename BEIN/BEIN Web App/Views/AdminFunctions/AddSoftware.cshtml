@@ -4,14 +4,15 @@
 }
 
 <section id="add-software">
-    <form>
+    <div asp-validation-summary="All"></div>
+    <form asp-action="AddSoftware" method="post" enctype="multipart/form-data">
         <div id="upload-alert">
             File '' uploaded
         </div>
         <div id="top-fields">
             <div id="left-form-fields">
                 <div id="photo-and-name-fields">
-                    <input asp-for="ImageFile" id="photo" accept="image/*">
+                    <input type="file" asp-for="ImageFile" name="image" id="photo" accept="image/*">
                     <button id="visible-photo-upload-btn" onclick="upload()" type="button">
                         <i class="fa-regular fa-file-image"></i>
                     </button>
@@ -19,7 +20,7 @@
                 </div>
                 <input asp-for="Vendor" id="vendor" placeholder="Vendor">
                 <input asp-for="ProjectStage" id="project-stage" placeholder="Project Stage">
-                <input asp-for="Sectors.SectorTitle" list="sectors" name="sector" placeholder="Sector">
+                <input list="sectors" name="sector" placeholder="Sector">
                 <datalist id="sectors">
                     @foreach (var sector in ViewBag.sectors as List<Sector>) 
                     {
@@ -28,7 +29,7 @@
                 </datalist>
             </div>
             <div id="right-form-fields">
-                <input asp-for="Professions" list="professions" id="professions" placeholder="Professions">
+                <input asp-for="Professions" list="professions" id="professions-input" placeholder="Professions">
                 <datalist id="professions">
                     <option value="Architect">Architect</option>
                     <option value="Landscaper">Landscaper</option>
@@ -39,9 +40,12 @@
             </div>
         </div>
         <div id="bottom-fields">
+            @{
+                Model.Features = [new()];
+            }
             <div id="fields">
-                <input type="text" id="feature" placeholder="Feature Name">
-                <textarea id="feature-desc" placeholder="Feature Description"></textarea>
+                <input asp-for="Features.First().Title" id="feature" placeholder="Feature Title" required>
+                <textarea asp-for="Features.First().Description" id="feature-desc" placeholder="Feature Description" required></textarea>
             </div>
             <button onclick="addFeature()" id="add-feature-btn" type="button">
                 <i class="fa-solid fa-check"></i>

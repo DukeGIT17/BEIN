@@ -85,6 +85,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 await app.InitializeIdentityAsync();
-await app.InitializeSectorAsync(builder.Configuration);
+await app.InitializeSectorAsync(app.Services.CreateScope().ServiceProvider.GetRequiredService<IWebHostEnvironment>());
 
 app.Run();

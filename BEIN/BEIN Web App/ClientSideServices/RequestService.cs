@@ -70,7 +70,7 @@ namespace BEIN_Web_App.ClientSideServices
             }
             catch (Exception ex)
             {
-                _returnDictionary["Success"] = true;
+                _returnDictionary["Success"] = false;
                 _returnDictionary["ErrorMessage"] = ex.Message;
                 return _returnDictionary;
             }
@@ -156,6 +156,7 @@ namespace BEIN_Web_App.ClientSideServices
                 if (!response.IsSuccessStatusCode) throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
 
                 _returnDictionary["Success"] = true;
+                _returnDictionary["FileName"] = await response.Content.ReadAsStringAsync();
                 return _returnDictionary;
             }
             catch (Exception ex)

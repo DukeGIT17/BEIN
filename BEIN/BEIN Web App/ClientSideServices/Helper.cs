@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Headers;
+using BEIN_DL.Models;
 
 namespace BEIN_Web_App.ClientSideServices
 {
@@ -13,7 +14,7 @@ namespace BEIN_Web_App.ClientSideServices
         {
             var fileStreamContent = new StreamContent(file.OpenReadStream());
             fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
-            formData.Add(fileStreamContent, "ProfileImageFile", file.FileName);
+            formData.Add(fileStreamContent, "file", file.FileName);
         }
     }
 }

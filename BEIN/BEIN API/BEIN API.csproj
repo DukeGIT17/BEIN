@@ -31,11 +31,12 @@
   <ItemGroup>
     <ProjectReference Include="..\BEIN DL\BEIN DL.csproj" />
     <ProjectReference Include="..\BEIN ServerSide SL\BEIN ServerSide SL.csproj" />
+    <ProjectReference Include="..\Shared Library\Shared Library.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Misc\" />
     <Folder Include="Assets\Images\" />
+    <Folder Include="Assets\Misc\" />
   </ItemGroup>
 
 </Project>

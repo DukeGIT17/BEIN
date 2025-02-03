@@ -7,10 +7,11 @@ using Microsoft.IdentityModel.Tokens;
 using static System.Guid;
 using static Shared_Library.GlobalUtilities.StaticUtilites;
 using OfficeOpenXml;
+using Microsoft.AspNetCore.Hosting;
 
 namespace BEIN_RL.Repositories
 {
-    public class AdminFunctionsRepo(BeinDbContext context) : IAdminFunctions
+    public class AdminFunctionsRepo(BeinDbContext context, IWebHostEnvironment env) : IAdminFunctions
     {
         private Dictionary<string, object> _returnDictionary = [];
 
@@ -61,7 +62,6 @@ namespace BEIN_RL.Repositories
                     });
                 }
 
-                product.Id = NewGuid().ToString();
                 await context.AddAsync(product);
                 await context.SaveChangesAsync();
 
@@ -85,7 +85,7 @@ namespace BEIN_RL.Repositories
 
                 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
                 
-                using (var stream = new FileStream($@"{ApplicationAssetsPath}\Misc\{file.FileName}", FileMode.Open, FileAccess.Read))
+                using (var stream = new FileStream(Path.Combine(env.ContentRootPath, "Misc", file.FileName), FileMode.Open, FileAccess.Read))
                 using (var package = new ExcelPackage(stream))
                 {
                     var worksheet = package.Workbook.Worksheets[0];

@@ -6,8 +6,6 @@ namespace Shared_Library.GlobalUtilities
 {
     public static class StaticUtilites
     {
-        public static string ApplicationAssetsPath { get; } = "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN API\\Assets";
-
         public static bool IdentityOutcome(this IdentityResult result, out string error)
         {
             error = "";
@@ -17,7 +15,7 @@ namespace Shared_Library.GlobalUtilities
             return !string.IsNullOrEmpty(error);
         }
 
-        public static Dictionary<string, object> SaveFile(IFormFile file, string? destinationFolder = null, string? name = null)
+        public static Dictionary<string, object> SaveFile(IFormFile file, string dest, string? name = null)
         {
             Dictionary<string, object> _returnDictionary = [];
             try
@@ -26,12 +24,13 @@ namespace Shared_Library.GlobalUtilities
                 if (Path.GetExtension(file.FileName) != ".xlsx")
                 {
                     if (name is not null)
-                        fileName = name + Path.GetExtension(file.FileName);
+                        fileName = $"{name} - {Guid.NewGuid() + Path.GetExtension(file.FileName)}";
                     else
-                        fileName = file.FileName;
+                        fileName = $"{Path.GetFileNameWithoutExtension(file.FileName)} - {Guid.NewGuid() + Path.GetExtension(file.FileName)}";
                 }
-                using var fileStream = new FileStream($@"{ApplicationAssetsPath}\{destinationFolder}\{fileName}", FileMode.Create);
-                file.CopyTo(fileStream);
+
+                using var fileStream = new FileStream(Path.Combine(dest ?? "", fileName), FileMode.Create);
+                file.CopyToAsync(fileStream).Wait();
 
                 _returnDictionary["Success"] = true;
                 _returnDictionary["FileName"] = fileName;
@@ -45,13 +44,28 @@ namespace Shared_Library.GlobalUtilities
             }
         }
 
-        public static Dictionary<string, object> DeleteFile(string filePath)
+        /// <summary>
+        /// Permanent deletion of existing supported files (.xlsx, image).
+        /// </summary>
+        /// <param name="fileName">
+        /// The name of the file to be deleted.
+        /// </param>
+        /// <param name="fileType">
+        /// The file type of the file to be deleted.
+        /// </param>
+        /// <returns></returns>
+        public static Dictionary<string, object> DeleteFile(string fileName, string fileType)
         {
             Dictionary<string, object> _returnDictionary = [];
             try
             {
-                if (!File.Exists(filePath)) throw new($"Could not find file path {filePath}.");
-                File.Delete(filePath);
+                if (fileType == "Excel" || fileType == "Image")
+                {
+                    if (!File.Exists(fileName)) throw new($"Could not find file in the provided path.");
+                    File.Delete(fileName);
+                }
+                else
+                    throw new("Unsupported file type!");
 
                 _returnDictionary["Success"] = true;
                 return _returnDictionary;

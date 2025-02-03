@@ -6596,6 +6596,7 @@
       "Microsoft.EntityFrameworkCore.Relational >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
+      "Shared Library >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.IdentityModel.Tokens.Jwt >= 8.0.0"
     ]
@@ -6637,6 +6638,9 @@
             },
             "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj": {
               "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN ServerSide SL\\BEIN ServerSide SL.csproj"
+            },
+            "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\Shared Library\\Shared Library.csproj": {
+              "projectPath": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\Shared Library\\Shared Library.csproj"
             }
           }
         }
@@ -6728,5 +6732,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

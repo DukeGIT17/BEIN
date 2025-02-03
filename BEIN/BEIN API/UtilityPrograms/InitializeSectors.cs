@@ -7,13 +7,13 @@ namespace BEIN_API.UtilityPrograms
 {
     internal static class InitializeSectors
     {
-        internal static async Task InitializeSectorAsync(this WebApplication app, ConfigurationManager configuration)
+        internal static async Task InitializeSectorAsync(this WebApplication app, IWebHostEnvironment env)
         {
             var scope = app.Services.CreateScope();
             var context = scope.ServiceProvider.GetRequiredService<BeinDbContext>();
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string path = configuration["FileLocations:InitialSectors"]!;
+            string path = Path.Combine(Directory.GetParent(env.ContentRootPath)!.FullName, "Assets", "Sectors.xlsx");
             using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
             using (var package = new ExcelPackage(stream))
             {

@@ -1,6 +1,8 @@
 ﻿using BEIN_DL.Models;
+using BEIN_Web_App.ClientSideServices;
 using BEIN_Web_App.IClientSideServices;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace BEIN_Web_App.Controllers
 {
@@ -31,7 +33,6 @@ namespace BEIN_Web_App.Controllers
                 }
 
                 return RedirectToAction("Index", "Home");
-
             }
             catch (Exception ex)
             {
@@ -49,7 +50,7 @@ namespace BEIN_Web_App.Controllers
                 if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                 if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
                 ViewBag.sectors = sectors;
-                return View();
+                return View(new SoftwareProduct());
             }
             catch (Exception ex)
             {
@@ -66,6 +67,19 @@ namespace BEIN_Web_App.Controllers
                 if (!ModelState.IsValid)
                     return View(software);
 
+                var file = HttpContext.Request.Form.Files["image"];
+                if (file is null)
+                {
+                    ModelState.AddModelError("", "Please provide a logo for this software product.");
+                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                    if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+                    if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
+                    ViewBag.sectors = sectors;
+                    return View(software);
+                }
+
+                software.ImageFile = file;
+
                 software.Sectors = [];
                 HttpContext.Request.Form["sector"]!.ToString()
                     .Split(',', StringSplitOptions.RemoveEmptyEntries)
@@ -78,15 +92,48 @@ namespace BEIN_Web_App.Controllers
                         }
                     ));
 
+                software.Features = [];
+                var featureNames = HttpContext.Request.Form["feature_name"]!.ToString()
+                    .Split(',', StringSplitOptions.TrimEntries)
+                    .ToList();
+
+                var featureDescs = HttpContext.Request.Form["feature_desc"]!.ToString()
+                    .Split(',', StringSplitOptions.TrimEntries)
+                    .ToList();
+
+                for (int i = 0; i < featureNames.Count; i++)
+                {
+                    software.Features.Add(new()
+                    {
+                        Title = featureNames[i],
+                        Description = featureDescs[i]
+                    });
+                }
+
+                _returnDictionary = requestService.SendFileAsync(software.ImageFile!, HttpMethod.Post, $"/Files/SaveFile?name={software.Name}").Result;
+                if (!(bool)_returnDictionary["Success"])
+                {
+                    ModelState.AddModelError("", _returnDictionary["ErrorMessage"].ToString()!);
+                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                    if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+                    if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
+                    ViewBag.sectors = sectors;
+                    return View(software);
+                }
+
+                software.ImageName = _returnDictionary["FileName"] as string;
                 _returnDictionary = requestService.SendRequestAsync(software, HttpMethod.Post, "/AdminFunctions/AddSoftwareProduct").Result;
                 if (!(bool)_returnDictionary["Success"])
                 {
                     ModelState.AddModelError("", _returnDictionary["ErrorMessage"].ToString()!);
+                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                    if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+                    if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
+                    ViewBag.sectors = sectors;
                     return View(software);
                 }
 
-                return RedirectToAction("Index", "Home");
-
+                return RedirectToAction("LandingPage", "General");
             }
             catch (Exception ex)
             {

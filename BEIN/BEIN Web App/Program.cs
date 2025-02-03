@@ -15,6 +15,8 @@ builder.Services.AddHttpClient<IRequestService, RequestService>();
 builder.Services.AddScoped<INavigationService, NavigationService>();
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddMemoryCache();
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 .AddCookie(options =>
 {
