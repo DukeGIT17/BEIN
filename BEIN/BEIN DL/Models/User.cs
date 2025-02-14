@@ -6,7 +6,7 @@ namespace BEIN_DL.Models
     public class User
     {
         [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; } = Guid.NewGuid().ToString();
 
         [Required(ErrorMessage = "The name field is required.")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Please provide a valid name. A name must be between 50 and 3 characters.")]
@@ -29,6 +29,7 @@ namespace BEIN_DL.Models
         public int YearsOfExperience { get; set; }
 
         #region Navigation Properties
+        public List<Rating>? Ratings { get; set; }
         public List<Visit>? Visits { get; set; }
         #endregion
     }

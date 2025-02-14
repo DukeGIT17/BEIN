@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9vknqiubex</Fingerprint>
-      <Integrity>m7SyN4+STHOWNfvKKxX/54ylgEf9ijNjXtgepiAhz8E=</Integrity>
+      <Fingerprint>b4hn850g04</Fingerprint>
+      <Integrity>lQ05fhfjoKb4UzeOIzegkN20v5XiQQ+j2h2EzdI5k3s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\admin function pages css\add_software.css'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>knieax25j0</Fingerprint>
-      <Integrity>8COC6MQH1th/GXng3R8Uv+BfTfx5S+gbjDV/3/hFEFw=</Integrity>
+      <Fingerprint>98gxu3fkzu</Fingerprint>
+      <Integrity>l3WNrJGt3jqCqJ1kj5wInUFhfmfBWx/whYxn85GLrPo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\layout css\layout.css'))</OriginalItemSpec>
@@ -39960,6 +39960,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\dev4.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\excel file logo.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BEIN Web App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BEIN Web App</BasePath>
+      <RelativePath>images/excel file logo.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9wrlqdtvp1</Fingerprint>
+      <Integrity>eb6fJwxsPTZIdb6s4Hzx4pcVHZIaUthe5byXjEyGXmc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\excel file logo.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\founder.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>BEIN Web App</SourceId>
@@ -40026,8 +40044,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>j02kokt7ty</Fingerprint>
-      <Integrity>M7+Hy30aql8EXeLGNDlstItR3Gxq9RDMMRguP1RWDeM=</Integrity>
+      <Fingerprint>dzo1cllck2</Fingerprint>
+      <Integrity>R3vIz8C2hjOdFptlT0c23FJE27fYq4PcKFxLeGPGivE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin function pages js\add_software.js'))</OriginalItemSpec>

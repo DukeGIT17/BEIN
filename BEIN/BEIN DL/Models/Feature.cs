@@ -7,7 +7,7 @@ namespace BEIN_DL.Models
     public class Feature
     {
         [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; } = Guid.NewGuid().ToString();
 
         [Required(ErrorMessage = "Please provide a feature title.")]
         [StringLength(200, MinimumLength = 3, ErrorMessage = "Feature title should have characters between 3 and 200 characters.")]
@@ -19,7 +19,7 @@ namespace BEIN_DL.Models
 
         #region Foreign Keys
         [ForeignKey(nameof(SoftwareProduct))]
-        public string SoftwareProductId { get; set; } = Guid.NewGuid().ToString();
+        public string SoftwareProductId { get; set; }
         #endregion
 
         #region Navigation Properties

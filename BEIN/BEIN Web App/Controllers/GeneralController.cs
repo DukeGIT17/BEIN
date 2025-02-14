@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BEIN_Web_App.IClientSideServices;
-using BEIN_DL.Models;
 
 namespace BEIN_Web_App.Controllers
 {
-    public class GeneralController(IRequestService requestService) : Controller
+    public class GeneralController : Controller
     {
-        private Dictionary<string, object> _returnDictionary = [];
 
         [HttpGet]
         public IActionResult LandingPage()

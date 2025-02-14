@@ -5,7 +5,7 @@ using static System.Console;
 
 namespace BEIN_Web_App.Controllers
 {
-    public class SectorsController(IRequestService requestService) : Controller
+    public class PublicController(IRequestService requestService) : Controller
     {
         private Dictionary<string, object> _returnDictionary = [];
 
@@ -14,7 +14,7 @@ namespace BEIN_Web_App.Controllers
         {
             try
             {
-                _returnDictionary = requestService.GetRequestAsync<Sector>("/Sector/GetSector?sectorName=" + sectorName).Result;
+                _returnDictionary = requestService.GetRequestAsync<Sector>("/Public/GetSector?sectorName=" + sectorName).Result;
                 if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                 if (_returnDictionary["Result"] is not Sector sector) throw new("Could not acquire sector from data source.");
                 return View("Sector", sector);

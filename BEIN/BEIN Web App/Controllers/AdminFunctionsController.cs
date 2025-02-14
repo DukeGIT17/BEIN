@@ -1,8 +1,6 @@
 ﻿using BEIN_DL.Models;
-using BEIN_Web_App.ClientSideServices;
 using BEIN_Web_App.IClientSideServices;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace BEIN_Web_App.Controllers
 {
@@ -46,7 +44,7 @@ namespace BEIN_Web_App.Controllers
         {
             try
             {
-                _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Public/GetAllSectors").Result;
                 if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                 if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
                 ViewBag.sectors = sectors;
@@ -71,7 +69,7 @@ namespace BEIN_Web_App.Controllers
                 if (file is null)
                 {
                     ModelState.AddModelError("", "Please provide a logo for this software product.");
-                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Public/GetAllSectors").Result;
                     if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                     if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
                     ViewBag.sectors = sectors;
@@ -114,7 +112,7 @@ namespace BEIN_Web_App.Controllers
                 if (!(bool)_returnDictionary["Success"])
                 {
                     ModelState.AddModelError("", _returnDictionary["ErrorMessage"].ToString()!);
-                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Public/GetAllSectors").Result;
                     if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                     if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
                     ViewBag.sectors = sectors;
@@ -126,7 +124,7 @@ namespace BEIN_Web_App.Controllers
                 if (!(bool)_returnDictionary["Success"])
                 {
                     ModelState.AddModelError("", _returnDictionary["ErrorMessage"].ToString()!);
-                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Sector/GetAll").Result;
+                    _returnDictionary = requestService.GetRequestAsync<List<Sector>>("/Public/GetAllSectors").Result;
                     if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                     if (_returnDictionary["Result"] is not List<Sector> sectors) throw new("Failed to acquire sectors from the API.");
                     ViewBag.sectors = sectors;

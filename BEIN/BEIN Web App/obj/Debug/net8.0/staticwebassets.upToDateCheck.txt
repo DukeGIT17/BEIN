@@ -2217,6 +2217,7 @@ wwwroot\images\dev1.jpeg
 wwwroot\images\dev2.jpeg
 wwwroot\images\dev3.jpeg
 wwwroot\images\dev4.jpeg
+wwwroot\images\excel file logo.png
 wwwroot\images\founder.jpeg
 wwwroot\images\lead-dev.jpeg
 wwwroot\images\mob-dev.jpeg

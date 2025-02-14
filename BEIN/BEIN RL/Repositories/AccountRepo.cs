@@ -39,9 +39,9 @@ namespace BEIN_RL.Repositories
                     new(ClaimTypes.Role, "User")
                 ];
 
-                if (StaticUtilites.IdentityOutcome(await signInManager.UserManager.CreateAsync(newUser, model.Password), out errorMessage)) throw new(errorMessage);
-                if (StaticUtilites.IdentityOutcome(await signInManager.UserManager.AddClaimsAsync(newUser, claims), out errorMessage)) throw new(errorMessage);
-                if (StaticUtilites.IdentityOutcome(await signInManager.UserManager.AddToRoleAsync(newUser, "User"), out errorMessage)) throw new(errorMessage);
+                if (OutcomeUtilities.IdentityOutcome(await signInManager.UserManager.CreateAsync(newUser, model.Password), out errorMessage)) throw new(errorMessage);
+                if (OutcomeUtilities.IdentityOutcome(await signInManager.UserManager.AddClaimsAsync(newUser, claims), out errorMessage)) throw new(errorMessage);
+                if (OutcomeUtilities.IdentityOutcome(await signInManager.UserManager.AddToRoleAsync(newUser, "User"), out errorMessage)) throw new(errorMessage);
 
                 await context.AddAsync(new User
                 {

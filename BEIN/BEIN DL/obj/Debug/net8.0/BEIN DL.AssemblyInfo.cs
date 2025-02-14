@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BEIN DL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bfbaefe8bc49b39445d07327647b2c6bb4a893d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce52987b5bf2608913f952cd9b14725b4c4398fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BEIN DL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BEIN DL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,7 +6,7 @@ namespace BEIN_DL.Models
     public class Sector
     {
         [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; } = Guid.NewGuid().ToString();
 
         [Required(ErrorMessage = "Please provide a sector title.")]
         [StringLength(50, ErrorMessage = "Sector titles should not be greater than 50 characters.")]

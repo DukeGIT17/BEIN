@@ -1,11 +1,16 @@
 ﻿const photoUpload = document.getElementById('photo');
 const visiblePhotoBtn = document.getElementById('visible-photo-upload-btn');
 const alertBox = document.getElementById('upload-alert');
+const bulkUploadBtn = document.getElementById('bulk-upload');
+const dropArea = document.getElementById('upload-field');
+const displayArea = document.getElementById('uploaded-file');
+const detailsArea = document.getElementById('file-details');
+const submitBtn = document.getElementById('submit');
 const linkElement = document.createElement("link");
+let file;
 
 linkElement.setAttribute("rel", "stylesheet");
 linkElement.setAttribute("href", "/css/admin function pages css/add_software.css");
-
 document.head.appendChild(linkElement);
 
 function upload() {
@@ -13,7 +18,7 @@ function upload() {
 }
 
 function bulkUpload() {
-    document.getElementById('bulk-upload').click();
+    bulkUploadBtn.click();
 }
 
 function removeFile(inputId) {
@@ -84,13 +89,11 @@ function addFeature() {
     featureName.setAttribute('type', 'text');
     featureName.setAttribute('value', feature.value);
     featureName.setAttribute('readonly', true);
-    featureName.setAttribute('name', 'feature_name');
 
     const featureDescInput = document.createElement('input');
     featureDescInput.setAttribute('type', 'text');
     featureDescInput.setAttribute('value', featureDesc.value);
     featureDescInput.setAttribute('readonly', true);
-    featureDescInput.setAttribute('name', 'feature_desc');
 
     document.getElementById('added-features').appendChild(newFeature);
     newFeature.appendChild(featureData);
@@ -107,3 +110,87 @@ function addFeature() {
     });
 }
 
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, (e) => e.preventDefault());
+});
+
+bulkUploadBtn.addEventListener('change', function (event) {
+    file = event.target.files[0];
+    handleFile(file);
+});
+
+dropArea.addEventListener('dragover', () => dropArea.classList.add('drag-over'));
+dropArea.addEventListener('dragleave', () => dropArea.classList.remove("drag-over"));
+
+dropArea.addEventListener('drop', (event) => {
+    dropArea.classList.remove('drag-over');
+    file = event.dataTransfer.files[0];
+    handleFile(file);
+});
+
+function handleFile(file) {
+    if (!file) return;
+
+    const allowedExtensions = ['xlsx', 'xls'];
+    const fileExtension = file.name.split('.').pop().toLowerCase();
+
+    if (!allowedExtensions.includes(fileExtension)) {
+        alert(`Invalid file type '${fileExtension}'. Please select an Excel file (.xlsx, .xls).`);
+    } else {
+        const fileTitle = detailsArea.querySelector("strong");
+        const fileTypeSize = detailsArea.querySelector("span");
+
+        if (fileTitle && fileTypeSize) {
+            fileTitle.innerText = file.name;
+            fileTypeSize.innerHTML = `<strong>.${fileExtension.toUpperCase()}</strong> | ${formatFileSize(file.size)}`;
+            displayArea.style.display = 'flex';
+        } else {
+            alert('Something went wrong with the file upload! Please try again, if the issue persists, try refreshing the page.')
+        }
+    }
+}
+
+function formatFileSize(bytes) {
+    const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+    let i = 0;
+    while (bytes >= 1024 && i < sizes.length - 1) {
+        bytes /= 1024;
+        i++;
+    }
+    return `${bytes.toFixed(2)} ${sizes[i]}`;
+}
+
+function hideElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.style.display = 'none';
+        file = null;
+    } else {
+        alert('Something went wrong! We couldn\'t remove the selected file.');
+    }
+}
+
+submitBtn.addEventListener('click', async (e) => {
+    e.preventDefault()
+
+    if (file) {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        let response = await fetch('https://localhost:7012/api.bein.com/AdminFunctions/BulkSoftwareUpload', {
+            method: 'POST',
+            body: formData
+        })
+
+        if (response.ok) {
+            alert('Upload successful.');
+            setTimeout(async () => {
+                await fetch('https://localhost:7222/General/LandingPage');
+            }, 1500);
+        } else {
+            alert(`Upload failed! ${await response.text()}`);
+        }
+    } else {
+        alert('Please select an excel file to upload.')
+    }
+});

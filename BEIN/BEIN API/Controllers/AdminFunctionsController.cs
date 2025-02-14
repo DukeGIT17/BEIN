@@ -26,11 +26,11 @@ namespace BEIN_API.Controllers
         }
 
         [HttpPost(nameof(AddSoftwareProduct))]
-        public IActionResult AddSoftwareProduct(SoftwareProduct software)
+        public IActionResult AddSoftwareProduct([FromBody] SoftwareProduct model)
         {
             try
             {
-                _returnDictionary = adminFunctionsService.AddSoftwareProduct(software).Result;
+                _returnDictionary = adminFunctionsService.AddSoftwareProduct(model).Result;
                 if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
                 return Ok();
             }

@@ -19,8 +19,8 @@ builder.Services.AddScoped<IAccount, AccountRepo>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAdminFunctions, AdminFunctionsRepo>();
 builder.Services.AddScoped<IAdminFunctionsService, AdminFunctionsService>();
-builder.Services.AddScoped<ISector, SectorRepo>();
-builder.Services.AddScoped<ISectorService, SectorService>();
+builder.Services.AddScoped<IPublic, PublicRepo>();
+builder.Services.AddScoped<IPublicService, PublicService>();
 
 builder.Services.AddSingleton<JwtUtility>();
 
@@ -61,6 +61,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+builder.Services.AddCors(options => options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+
 builder.Services.AddControllers().AddJsonOptions(options
     => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
 );
@@ -76,6 +78,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 

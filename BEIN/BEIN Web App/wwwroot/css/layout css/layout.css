@@ -308,6 +308,13 @@ nav li {
     margin-right: .5rem;
 }
 
+#username {
+    border: 2px solid var(--nav-text-color);
+    padding: .8rem;
+    border-radius: 10rem;
+    background-color: var(--secondary-color);
+}
+
 footer {
     position: absolute;
     background-color: var(--nav-background-color);

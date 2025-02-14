@@ -23,3 +23,6 @@ C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Sha
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\refint\Shared Library.dll
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared Library.pdb
 C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\ref\Shared Library.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\bin\Debug\net8.0\BEIN DL.dll
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\bin\Debug\net8.0\BEIN DL.pdb
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\Shared Library\obj\Debug\net8.0\Shared L.0D6F4EEC.Up2Date

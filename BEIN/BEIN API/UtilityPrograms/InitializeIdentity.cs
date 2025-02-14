@@ -65,9 +65,9 @@ namespace BEIN_API.UtilityPrograms
                         new(ClaimTypes.Role, "Admin")
                     ];
 
-                    if (!StaticUtilites.IdentityOutcome(await userManager.CreateAsync(sysAdmin, "Admin101!"), out errorMessage)) WriteLine(errorMessage);
-                    if (!StaticUtilites.IdentityOutcome(await userManager.AddClaimsAsync(sysAdmin, claims), out errorMessage)) WriteLine(errorMessage);
-                    if (!StaticUtilites.IdentityOutcome(await userManager.AddToRoleAsync(sysAdmin, "System Admin"), out errorMessage)) WriteLine(errorMessage);
+                    if (!OutcomeUtilities.IdentityOutcome(await userManager.CreateAsync(sysAdmin, "Admin101!"), out errorMessage)) WriteLine(errorMessage);
+                    if (!OutcomeUtilities.IdentityOutcome(await userManager.AddClaimsAsync(sysAdmin, claims), out errorMessage)) WriteLine(errorMessage);
+                    if (!OutcomeUtilities.IdentityOutcome(await userManager.AddToRoleAsync(sysAdmin, "System Admin"), out errorMessage)) WriteLine(errorMessage);
 
                     var user = await context.Users.FirstOrDefaultAsync(u => u.Email == admin.Email);
                     if (user is null)

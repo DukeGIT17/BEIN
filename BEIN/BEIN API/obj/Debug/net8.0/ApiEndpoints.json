@@ -66,69 +66,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImageName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImageFile",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Vendor",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Rating",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Review",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProjectStage",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Professions",
-        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Sectors",
-        "Type": "System.Collections.Generic.List\u00601[[BEIN_DL.Models.SectorProduct, BEIN DL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Features",
-        "Type": "System.Collections.Generic.List\u00601[[BEIN_DL.Models.Feature, BEIN DL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Visits",
-        "Type": "System.Collections.Generic.List\u00601[[BEIN_DL.Models.Visit, BEIN DL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
+        "Name": "model",
+        "Type": "BEIN_DL.Models.SoftwareProduct",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -172,6 +112,22 @@
   },
   {
     "ContainingType": "BEIN_API.Controllers.FilesController",
+    "Method": "RetrieveFile",
+    "RelativePath": "api.bein.com/Files/RetrieveFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.FilesController",
     "Method": "SaveFile",
     "RelativePath": "api.bein.com/Files/SaveFile",
     "HttpMethod": "POST",
@@ -192,9 +148,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BEIN_API.Controllers.SectorController",
-    "Method": "GetAll",
-    "RelativePath": "api.bein.com/Sector/GetAll",
+    "ContainingType": "BEIN_API.Controllers.PublicController",
+    "Method": "GetAllSectors",
+    "RelativePath": "api.bein.com/Public/GetAllSectors",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -202,9 +158,19 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BEIN_API.Controllers.SectorController",
+    "ContainingType": "BEIN_API.Controllers.PublicController",
+    "Method": "GetAllSoftware",
+    "RelativePath": "api.bein.com/Public/GetAllSoftware",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.PublicController",
     "Method": "GetSector",
-    "RelativePath": "api.bein.com/Sector/GetSector",
+    "RelativePath": "api.bein.com/Public/GetSector",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -215,6 +181,32 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.PublicController",
+    "Method": "GetSoftware",
+    "RelativePath": "api.bein.com/Public/GetSoftware",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "softwareName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BEIN_API.Controllers.PublicController",
+    "Method": "SearchData",
+    "RelativePath": "api.bein.com/Public/SearchData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

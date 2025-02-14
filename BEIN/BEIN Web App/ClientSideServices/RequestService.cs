@@ -5,7 +5,6 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using static BEIN_Web_App.ClientSideServices.Helper;
-using System.ComponentModel.Design.Serialization;
 
 namespace BEIN_Web_App.ClientSideServices
 {
@@ -105,7 +104,6 @@ namespace BEIN_Web_App.ClientSideServices
                 if (string.IsNullOrEmpty(token)) throw new("Failed to retrieve authentication token");
                 client.DefaultRequestHeaders.Authorization = new("Bearer", token);
 
-                var val = httpContextAccessor.HttpContext!.User;
                 _returnDictionary["Success"] = true;
                 return _returnDictionary;
             }

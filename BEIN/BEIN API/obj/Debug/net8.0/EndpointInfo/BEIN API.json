@@ -115,132 +115,21 @@
         "tags": [
           "AdminFunctions"
         ],
-        "parameters": [
-          {
-            "name": "Id",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ImageName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Name",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "maxLength": 100,
-              "minLength": 0,
-              "type": "string"
-            }
-          },
-          {
-            "name": "Description",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "maxLength": 700,
-              "minLength": 0,
-              "type": "string"
-            }
-          },
-          {
-            "name": "Vendor",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "maxLength": 100,
-              "minLength": 0,
-              "type": "string"
-            }
-          },
-          {
-            "name": "Rating",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "Review",
-            "in": "query",
-            "schema": {
-              "maxLength": 2500,
-              "minLength": 0,
-              "type": "string"
-            }
-          },
-          {
-            "name": "ProjectStage",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Professions",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "Sectors",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/SectorProduct"
-              }
-            }
-          },
-          {
-            "name": "Features",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Feature"
-              }
-            }
-          },
-          {
-            "name": "Visits",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Visit"
-              }
-            }
-          }
-        ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "ImageFile": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "ImageFile": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/SoftwareProduct"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SoftwareProduct"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SoftwareProduct"
               }
             }
           }
@@ -353,10 +242,19 @@
         }
       }
     },
-    "/api.bein.com/Sector/GetAll": {
+    "/api.bein.com/Files/RetrieveFile": {
       "get": {
         "tags": [
-          "Sector"
+          "Files"
+        ],
+        "parameters": [
+          {
+            "name": "filePath",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -365,10 +263,22 @@
         }
       }
     },
-    "/api.bein.com/Sector/GetSector": {
+    "/api.bein.com/Public/GetAllSectors": {
       "get": {
         "tags": [
-          "Sector"
+          "Public"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Public/GetSector": {
+      "get": {
+        "tags": [
+          "Public"
         ],
         "parameters": [
           {
@@ -378,6 +288,51 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Public/GetAllSoftware": {
+      "get": {
+        "tags": [
+          "Public"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Public/GetSoftware": {
+      "get": {
+        "tags": [
+          "Public"
+        ],
+        "parameters": [
+          {
+            "name": "softwareName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api.bein.com/Public/SearchData": {
+      "get": {
+        "tags": [
+          "Public"
         ],
         "responses": {
           "200": {
@@ -553,9 +508,8 @@
             "type": "string",
             "nullable": true
           },
-          "imageFile": {
+          "imageBase64": {
             "type": "string",
-            "format": "binary",
             "nullable": true
           },
           "name": {

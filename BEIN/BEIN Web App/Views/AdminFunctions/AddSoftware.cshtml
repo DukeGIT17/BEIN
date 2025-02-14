@@ -12,15 +12,15 @@
         <div id="top-fields">
             <div id="left-form-fields">
                 <div id="photo-and-name-fields">
-                    <input type="file" asp-for="ImageFile" name="image" id="photo" accept="image/*">
+                    <input type="file" asp-for="ImageFile" name="image" id="photo" accept="image/*" />
                     <button id="visible-photo-upload-btn" onclick="upload()" type="button">
                         <i class="fa-regular fa-file-image"></i>
                     </button>
-                    <input asp-for="Name" id="name" placeholder="Name">
+                    <input asp-for="Name" id="name" placeholder="Name" />
                 </div>
-                <input asp-for="Vendor" id="vendor" placeholder="Vendor">
-                <input asp-for="ProjectStage" id="project-stage" placeholder="Project Stage">
-                <input list="sectors" name="sector" placeholder="Sector">
+                <input asp-for="Vendor" id="vendor" placeholder="Vendor" />
+                <input asp-for="ProjectStage" id="project-stage" placeholder="Project Stage" />
+                <input list="sectors" name="sector" placeholder="Sector" />
                 <datalist id="sectors">
                     @foreach (var sector in ViewBag.sectors as List<Sector>) 
                     {
@@ -44,8 +44,8 @@
                 Model.Features = [new()];
             }
             <div id="fields">
-                <input asp-for="Features.First().Title" id="feature" placeholder="Feature Title" required>
-                <textarea asp-for="Features.First().Description" id="feature-desc" placeholder="Feature Description" required></textarea>
+                <input asp-for="Features.First().Title" id="feature" placeholder="Feature Title" />
+                <textarea asp-for="Features.First().Description" id="feature-desc" placeholder="Feature Description"></textarea>
             </div>
             <button onclick="addFeature()" id="add-feature-btn" type="button">
                 <i class="fa-solid fa-check"></i>
@@ -58,15 +58,24 @@
 </section>
 
 <section id="bulk-addition">
-    <form>
-        <input type="file" id="bulk-upload" accept=".xslx">
-        <button onclick="bulkUpload()" id="upload-section" type="button">
-            <i class="fa-solid fa-file-excel"></i>
-            <p>Upload Excel File</p>
-        </button>
-        <button type="submit" id="submit">
-            Submit
-        </button>
+    <form enctype="multipart/form-data">
+        <input type="file" id="bulk-upload" hidden accept=".xlsx,.xls" />
+        <span>Upload File</span>
+        <div id="upload-field">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            <p>Drop file here or <button onclick="bulkUpload()" type="button">Browse Files</button></p>
+        </div>
+        <div id="uploaded-file">
+            <img src="~/images/excel file logo.png" />
+            <div id="file-details">
+                <strong>File Title</strong>
+                <span><strong>File Type</strong> | 10MB</span>
+            </div>
+            <button onclick="hideElement('uploaded-file')" type="button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <button type="submit" id="submit">Submit</button>
     </form>
 </section>
 

@@ -3,11 +3,10 @@ using BEIN_DL.Models;
 using BEIN_RL.IRepositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using static System.Guid;
-using static Shared_Library.GlobalUtilities.StaticUtilites;
 using OfficeOpenXml;
 using Microsoft.AspNetCore.Hosting;
+using Shared_Library.GlobalUtilities;
 
 namespace BEIN_RL.Repositories
 {
@@ -48,7 +47,7 @@ namespace BEIN_RL.Repositories
                 foreach (var p in product.Sectors)
                     sectors.AddRange(context.Sectors.Where(s => s.Title == p.SectorTitle));
 
-                if (sectors.IsNullOrEmpty())
+                if (sectors.Count == 0)
                     throw new("Could not find any sectors that matched the sector names provided.");
 
                 product.Sectors = [];
@@ -59,6 +58,7 @@ namespace BEIN_RL.Repositories
                         SectorId = sector.Id,
                         SectorTitle = sector.Title,
                         Sector = sector,
+                        ProductName = product.Name
                     });
                 }
 
@@ -80,20 +80,19 @@ namespace BEIN_RL.Repositories
         {
             try
             {
-                _returnDictionary = SaveFile(file, "Misc");
+                _returnDictionary = FileUtilities.SaveFile(file, "Assets//Misc");
                 if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
 
                 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-                
-                using (var stream = new FileStream(Path.Combine(env.ContentRootPath, "Misc", file.FileName), FileMode.Open, FileAccess.Read))
+                string filePath = Path.Combine(env.ContentRootPath, "Assets//Misc", file.FileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
                 using (var package = new ExcelPackage(stream))
                 {
                     var worksheet = package.Workbook.Worksheets[0];
-                    var sectorWS = package.Workbook.Worksheets[1];
-                    var featureWS = package.Workbook.Worksheets[2];
+                    var featureWS = package.Workbook.Worksheets[1];
 
                     var rowCount = worksheet.Dimension.Rows;
-                    var sectorRC = sectorWS.Dimension.Rows;
                     var featureRC = featureWS.Dimension.Rows;
 
                     for (int row = 2; row <= rowCount; row++)
@@ -104,39 +103,55 @@ namespace BEIN_RL.Repositories
                             Description = worksheet.Cells[row, 2].Value.ToString()!.Trim(),
                             Vendor = worksheet.Cells[row, 3].Value.ToString()!.Trim(),
                             ProjectStage = worksheet.Cells[row, 4].Value.ToString()!.Trim(),
-                            Professions = worksheet.Cells[row, 5].Value.ToString()!.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(val => val.Trim()).ToList()
-                            
+                            Professions = worksheet.GetListFromCell(row, 5, ','),
+                            Sectors = [],
+                            Features = []
                         };
 
-                        sp.Sectors = [];
-                        for (int sRow = 2; sRow <= sectorRC; sRow++)
+                        var sectorTitles = worksheet.GetListFromCell(row, 6, ',');
+                        foreach (Sector sector in context.Sectors)
                         {
-                            sp.Sectors.Add(new()
+                            if (sectorTitles.Contains(sector.Title))
                             {
-                                ProductName = worksheet.Cells[row, 1].Value.ToString()!.Trim(),
-                                SectorTitle = sectorWS.Cells[sRow, 1].Value.ToString()!.Trim()
-                            });
+                                sp.Sectors.Add(new()
+                                {
+                                    ProductName = sp.Name,
+                                    SectorTitle = sector.Title
+                                });
+                            }
                         }
 
-                        sp.Features = [];
                         for (int fRow = 2; fRow <= featureRC; fRow++)
                         {
-                            sp.Features.Add(new()
+                            var spNames = featureWS.GetListFromCell(fRow, 3, ',');
+                            if (spNames.Contains(sp.Name))
                             {
-                                Title = worksheet.Cells[fRow, 1].Value.ToString()!.Trim(),
-                                Description = worksheet.Cells[fRow, 2].Value.ToString()!.Trim(),
-                            });
+                                sp.Features.Add(new()
+                                {
+                                    Title = featureWS.Cells[fRow, 1].Value.ToString()!.Trim(),
+                                    Description = featureWS.Cells[fRow, 2].Value.ToString()!.Trim(),
+                                });
+                            }
+                            
                         }
 
                         _returnDictionary = await AddSoftwareProductAsync(sp);
                         if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
                     }
                 }
+
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
+
                 _returnDictionary["Success"] = true;
                 return _returnDictionary;
             }
             catch (Exception ex)
             {
+                string filePath = Path.Combine(env.ContentRootPath, "Assets//Misc", file.FileName);
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
+
                 _returnDictionary["Success"] = false;
                 _returnDictionary["ErrorMessage"] = ex.Message + "\nInner Exception: " + ex.InnerException;
                 return _returnDictionary;

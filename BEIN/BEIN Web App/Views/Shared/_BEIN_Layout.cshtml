@@ -40,7 +40,7 @@
                         <div class="dd-content">
                             @foreach (var sector in await NavigationService.GetAllSectorsAsync()) 
                             {
-                                <a asp-controller="Sectors" asp-action="GetSector" asp-route-sectorName="@sector.Title">
+                                <a asp-controller="Public" asp-action="GetSector" asp-route-sectorName="@sector.Title">
                                     <i class="fa-solid fa-caret-right"></i>
                                     @sector.Title
                                 </a>
@@ -60,9 +60,12 @@
 
                     @if (accessor.HttpContext!.User.Identity is not null && accessor.HttpContext.User.Identity.IsAuthenticated) 
                     {
+                        var names = accessor.HttpContext.User.Claims.Where(claim => claim.Type.Equals("username", StringComparison.OrdinalIgnoreCase)).First().Value.Split(' ').Select(val => val.Remove(1));
+                        var displayName = string.Join("", names);
+
                         <div class="signed-in">
                             <div id="username">
-                                @accessor.HttpContext.User.Claims.Where(claim => claim.Type.Equals("username", StringComparison.OrdinalIgnoreCase)).First().Value  
+                                @displayName
                             </div>
                             <div id="user-menu">
                                 <a class="profile">
@@ -124,7 +127,7 @@
                     <div class="dd-content">
                         @foreach (var sector in await NavigationService.GetAllSectorsAsync())
                         {
-                            <a asp-controller="Sectors" asp-action="GetSector" asp-route-sectorName="@sector.Title">
+                            <a asp-controller="Public" asp-action="GetSector" asp-route-sectorName="@sector.Title">
                                 <i class="fa-solid fa-caret-right"></i>
                                 @sector.Title
                             </a>

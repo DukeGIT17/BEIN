@@ -47,7 +47,6 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     place-self: center;
-    cursor: pointer;
 }
 
 #photo-and-name-fields > button:hover {
@@ -100,12 +99,7 @@ textarea {
     background-color: var(--primary-color);
     color: var(--nav-text-color);
     font-weight: bold;
-    cursor: pointer;
     font-size: larger;
-}
-
-#add-feature-btn:hover {
-    opacity: .8;
 }
 
 #form-submission-btn {
@@ -139,15 +133,14 @@ textarea {
     font-size: larger;
     color: var(--nav-text-color);
     border-radius: 5px;
-    cursor: pointer;
 }
 
 #bulk-addition {
     padding: 2rem 5rem 5rem 5rem;
-    ;
 }
 
 #bulk-addition > form {
+    position: relative;
     background-color: var(--background-color);
     box-shadow: var(--shadow-lg);
     padding: 2rem;
@@ -158,33 +151,69 @@ textarea {
     align-items: center;
 }
 
-#bulk-upload {
+#upload-field {
+    display: flex;
+    color: grey;
+}
+
+#uploaded-file {
     display: none;
 }
 
-#upload-section {
-    width: 70%;
-    height: 10rem;
-    background-color: var(--secondary-bg-color);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: var(--text-color);
-    font-size: 40px;
-    display: flex;
-    flex-direction: column;
+#upload-field, #uploaded-file {
+    gap: 1rem;
     align-items: center;
     justify-content: center;
-    gap: .7rem;
-    cursor: pointer;
+    background-color: var(--secondary-bg-color);
+    height: 5rem;
+    width: 50rem;
+    border: 2px dashed #ccc;
+    border-radius: 1rem;
 }
 
-#upload-section:hover {
-    box-shadow: var(--shadow-lg);
+#upload-field > i {
+    font-size: 20px;
+}
+
+#upload-field button {
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#upload-field button:hover {
     transition: var(--transition);
+    opacity: .6;
+    text-decoration: none;
 }
 
-#upload-section > p {
-    font-size: small;
+#uploaded-file > img {
+    width: 45px;
+    border: 2px solid #ccc;
+    border-radius: .8rem;
+}
+
+#file-details {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#file-details > span {
+    font-size: 13px;
+}
+
+#uploaded-file > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border: 2px solid #ccc;
+    border-radius: 3rem;
+    background-color: transparent;
+    font-size: 17px;
 }
 
 #submit {
@@ -195,4 +224,16 @@ textarea {
     height: 3rem;
     color: var(--nav-text-color);
     font-weight: bolder;
+}
+
+button:hover {
+    opacity: .8;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.drag-over {
+    border: 2px dashed var(--primary-color);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
 }
