@@ -353,7 +353,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "title": {
             "maxLength": 200,
@@ -371,6 +372,43 @@
           },
           "softwareProduct": {
             "$ref": "#/components/schemas/SoftwareProduct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Rating": {
+        "required": [
+          "ratingValue"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "ratingValue": {
+            "maximum": 5,
+            "minimum": 1,
+            "minLength": 1,
+            "type": "string"
+          },
+          "softwareId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "software": {
+            "$ref": "#/components/schemas/SoftwareProduct"
+          },
+          "review": {
+            "$ref": "#/components/schemas/Review"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
           }
         },
         "additionalProperties": false
@@ -407,6 +445,38 @@
         },
         "additionalProperties": false
       },
+      "Review": {
+        "required": [
+          "header",
+          "reviewText"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "header": {
+            "maxLength": 70,
+            "minLength": 3,
+            "type": "string"
+          },
+          "reviewText": {
+            "maxLength": 1200,
+            "minLength": 50,
+            "type": "string"
+          },
+          "ratingId": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "$ref": "#/components/schemas/Rating"
+          }
+        },
+        "additionalProperties": false
+      },
       "Sector": {
         "required": [
           "description",
@@ -417,7 +487,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "title": {
             "maxLength": 50,
@@ -502,7 +573,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "imageName": {
             "type": "string",
@@ -527,16 +599,6 @@
             "minLength": 0,
             "type": "string"
           },
-          "rating": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "review": {
-            "maxLength": 2500,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
           "projectStage": {
             "type": "string",
             "nullable": true
@@ -552,6 +614,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SectorProduct"
+            },
+            "nullable": true
+          },
+          "ratings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rating"
             },
             "nullable": true
           },
@@ -583,7 +652,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "name": {
             "maxLength": 50,
@@ -613,6 +683,13 @@
             "type": "integer",
             "format": "int32"
           },
+          "ratings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rating"
+            },
+            "nullable": true
+          },
           "visits": {
             "type": "array",
             "items": {
@@ -628,7 +705,8 @@
         "properties": {
           "userId": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "name": {
             "type": "string",
@@ -643,7 +721,8 @@
           },
           "softwareProductId": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "productName": {
             "type": "string",

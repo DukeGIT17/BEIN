@@ -47,6 +47,59 @@ namespace BEIN_API.Migrations
                     b.ToTable("Features");
                 });
 
+            modelBuilder.Entity("BEIN_DL.Models.Rating", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RatingValue")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SoftwareId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SoftwareId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Rating");
+                });
+
+            modelBuilder.Entity("BEIN_DL.Models.Review", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Header")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)");
+
+                    b.Property<string>("RatingId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ReviewText")
+                        .IsRequired()
+                        .HasMaxLength(1200)
+                        .HasColumnType("nvarchar(1200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RatingId")
+                        .IsUnique();
+
+                    b.ToTable("Review");
+                });
+
             modelBuilder.Entity("BEIN_DL.Models.Sector", b =>
                 {
                     b.Property<string>("Id")
@@ -123,13 +176,6 @@ namespace BEIN_API.Migrations
                     b.Property<string>("ProjectStage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Review")
-                        .HasMaxLength(2500)
-                        .HasColumnType("nvarchar(2500)");
 
                     b.Property<string>("Vendor")
                         .IsRequired()
@@ -220,6 +266,36 @@ namespace BEIN_API.Migrations
                     b.Navigation("SoftwareProduct");
                 });
 
+            modelBuilder.Entity("BEIN_DL.Models.Rating", b =>
+                {
+                    b.HasOne("BEIN_DL.Models.SoftwareProduct", "Software")
+                        .WithMany("Ratings")
+                        .HasForeignKey("SoftwareId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BEIN_DL.Models.User", "User")
+                        .WithMany("Ratings")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Software");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BEIN_DL.Models.Review", b =>
+                {
+                    b.HasOne("BEIN_DL.Models.Rating", "Rating")
+                        .WithOne("Review")
+                        .HasForeignKey("BEIN_DL.Models.Review", "RatingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rating");
+                });
+
             modelBuilder.Entity("BEIN_DL.Models.SectorProduct", b =>
                 {
                     b.HasOne("BEIN_DL.Models.Sector", "Sector")
@@ -258,6 +334,11 @@ namespace BEIN_API.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("BEIN_DL.Models.Rating", b =>
+                {
+                    b.Navigation("Review");
+                });
+
             modelBuilder.Entity("BEIN_DL.Models.Sector", b =>
                 {
                     b.Navigation("Products");
@@ -267,6 +348,8 @@ namespace BEIN_API.Migrations
                 {
                     b.Navigation("Features");
 
+                    b.Navigation("Ratings");
+
                     b.Navigation("Sectors");
 
                     b.Navigation("Visits");
@@ -274,6 +357,8 @@ namespace BEIN_API.Migrations
 
             modelBuilder.Entity("BEIN_DL.Models.User", b =>
                 {
+                    b.Navigation("Ratings");
+
                     b.Navigation("Visits");
                 });
 #pragma warning restore 612, 618

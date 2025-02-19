@@ -22,6 +22,13 @@ namespace BEIN_DL.Data
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<User>()
+                .HasMany(ratings => ratings.Ratings)
+                .WithOne(user => user.User)
+                .HasForeignKey(rating => rating.UserId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .IsRequired();
+
+            modelBuilder.Entity<User>()
                 .HasKey(u => u.Id);
 
             modelBuilder.Entity<User>()
@@ -59,6 +66,26 @@ namespace BEIN_DL.Data
                 .HasForeignKey(sector => sector.SectorId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired();
+
+            modelBuilder.Entity<SoftwareProduct>()
+                .HasMany(ratings => ratings.Ratings)
+                .WithOne(product => product.Software)
+                .HasForeignKey(ratings => ratings.SoftwareId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .IsRequired();
+
+            modelBuilder.Entity<Rating>()
+                .HasOne(review => review.Review)
+                .WithOne(rating => rating.Rating)
+                .HasForeignKey<Review>(review => review.RatingId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .IsRequired();
+
+            modelBuilder.Entity<Rating>()
+                .HasKey(r => r.Id);
+
+            modelBuilder.Entity<Review>()
+                .HasKey(r => r.Id);
 
             modelBuilder.Entity<Visit>()
                 .HasOne(product => product.Product)

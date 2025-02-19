@@ -74,7 +74,6 @@ namespace BEIN_API.UtilityPrograms
                     {
                         await context.AddAsync(new User
                         {
-                            Id = Guid.NewGuid().ToString(),
                             Name = admin.Name,
                             Surname = admin.Surname,
                             Email = admin.Email,

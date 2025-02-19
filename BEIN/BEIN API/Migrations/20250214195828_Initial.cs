@@ -33,8 +33,6 @@ namespace BEIN_API.Migrations
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(700)", maxLength: 700, nullable: false),
                     Vendor = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Rating = table.Column<int>(type: "int", nullable: false),
-                    Review = table.Column<string>(type: "nvarchar(2500)", maxLength: 2500, nullable: true),
                     ProjectStage = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Professions = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -105,6 +103,32 @@ namespace BEIN_API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Rating",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    RatingValue = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SoftwareId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Rating", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Rating_Softwares_SoftwareId",
+                        column: x => x.SoftwareId,
+                        principalTable: "Softwares",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Rating_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Visits",
                 columns: table => new
                 {
@@ -130,10 +154,46 @@ namespace BEIN_API.Migrations
                         principalColumn: "Id");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Review",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Header = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
+                    ReviewText = table.Column<string>(type: "nvarchar(1200)", maxLength: 1200, nullable: false),
+                    RatingId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Review", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Review_Rating_RatingId",
+                        column: x => x.RatingId,
+                        principalTable: "Rating",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Features_SoftwareProductId",
                 table: "Features",
                 column: "SoftwareProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Rating_SoftwareId",
+                table: "Rating",
+                column: "SoftwareId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Rating_UserId",
+                table: "Rating",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Review_RatingId",
+                table: "Review",
+                column: "RatingId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SectorProduct_SectorId",
@@ -172,10 +232,16 @@ namespace BEIN_API.Migrations
                 name: "Features");
 
             migrationBuilder.DropTable(
+                name: "Review");
+
+            migrationBuilder.DropTable(
                 name: "SectorProduct");
 
             migrationBuilder.DropTable(
                 name: "Visits");
+
+            migrationBuilder.DropTable(
+                name: "Rating");
 
             migrationBuilder.DropTable(
                 name: "Sectors");

@@ -21,7 +21,6 @@ namespace BEIN_RL.Repositories
                 var existingSector = await context.Sectors.FirstOrDefaultAsync(s => s.Title == sector.Title);
                 if (existingSector is not null) throw new($"A sector with the name '{sector.Title}' already exists.");
 
-                sector.Id = NewGuid().ToString();
                 await context.AddAsync(sector);
                 await context.SaveChangesAsync();
 
@@ -58,7 +57,8 @@ namespace BEIN_RL.Repositories
                         SectorId = sector.Id,
                         SectorTitle = sector.Title,
                         Sector = sector,
-                        ProductName = product.Name
+                        ProductName = product.Name,
+                        ProductId = product.Id
                     });
                 }
 
@@ -115,8 +115,10 @@ namespace BEIN_RL.Repositories
                             {
                                 sp.Sectors.Add(new()
                                 {
+                                    SectorId = sector.Id,
                                     ProductName = sp.Name,
-                                    SectorTitle = sector.Title
+                                    SectorTitle = sector.Title,
+                                    ProductId = sp.Id
                                 });
                             }
                         }
@@ -130,9 +132,9 @@ namespace BEIN_RL.Repositories
                                 {
                                     Title = featureWS.Cells[fRow, 1].Value.ToString()!.Trim(),
                                     Description = featureWS.Cells[fRow, 2].Value.ToString()!.Trim(),
+                                    SoftwareProductId = sp.Id
                                 });
                             }
-                            
                         }
 
                         _returnDictionary = await AddSoftwareProductAsync(sp);

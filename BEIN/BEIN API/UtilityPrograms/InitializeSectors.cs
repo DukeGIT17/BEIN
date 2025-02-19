@@ -24,7 +24,6 @@ namespace BEIN_API.UtilityPrograms
                 {
                     Sector sector = new()
                     {
-                        Id = Guid.NewGuid().ToString(),
                         Title = worksheet.Cells[row, 1].Value.ToString()!.Trim(),
                         ShortDescription = worksheet.Cells[row, 2].Value.ToString()!.Trim(),
                         Description = worksheet.Cells[row, 3].Value.ToString()!.Trim()

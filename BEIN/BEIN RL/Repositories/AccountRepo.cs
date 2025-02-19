@@ -45,7 +45,6 @@ namespace BEIN_RL.Repositories
 
                 await context.AddAsync(new User
                 {
-                    Id = Guid.NewGuid().ToString(),
                     Name = model.Name,
                     Surname = model.Surname,
                     Email = model.Email,

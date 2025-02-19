@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BEIN API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce52987b5bf2608913f952cd9b14725b4c4398fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75a49a52f4c62d3b5b264d14cdf3372f73ce1cae")]
 [assembly: System.Reflection.AssemblyProductAttribute("BEIN API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BEIN API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

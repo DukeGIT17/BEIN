@@ -41,6 +41,8 @@ namespace BEIN_DL.Models
         #region Navigation Properties
         public List<SectorProduct>? Sectors { get; set; }
 
+        public List<Rating>? Ratings { get; set; }
+
         public List<Feature>? Features { get; set; }
 
         public List<Visit>? Visits { get; set; }

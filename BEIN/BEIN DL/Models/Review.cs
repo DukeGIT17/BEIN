@@ -16,6 +16,9 @@ namespace BEIN_DL.Models
         [StringLength(1200, MinimumLength = 50, ErrorMessage = "Review should have between 50 and 1200 characters.")]
         public string ReviewText { get; set; }
 
+        [Required(ErrorMessage = "Review date and time not provided.")]
+        public DateTime ReviewTime { get; set; }
+
         #region Foreign Keys
         [ForeignKey(nameof(Rating))]
         public string RatingId { get; set; }

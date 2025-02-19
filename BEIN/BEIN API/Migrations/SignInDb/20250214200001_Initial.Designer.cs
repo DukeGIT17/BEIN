@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BEIN_API.Migrations.SignInDb
 {
     [DbContext(typeof(SignInDbContext))]
-    [Migration("20250128135214_InitialIdentity")]
-    partial class InitialIdentity
+    [Migration("20250214200001_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
