@@ -1,9 +1,10 @@
 wwwroot\css\admin function pages css\add_software.css
-wwwroot\css\general pages css\about_us.css
-wwwroot\css\general pages css\contact_us.css
-wwwroot\css\general pages css\landing_page.css
 wwwroot\css\layout css\layout.css
-wwwroot\css\sectors css\sectors.css
+wwwroot\css\public pages css\about_us.css
+wwwroot\css\public pages css\contact_us.css
+wwwroot\css\public pages css\landing_page.css
+wwwroot\css\public pages css\product.css
+wwwroot\css\public pages css\sectors.css
 wwwroot\css\sign-in css\sign-in.css
 wwwroot\css\site.css
 wwwroot\css\temp.css
@@ -2222,10 +2223,9 @@ wwwroot\images\founder.jpeg
 wwwroot\images\lead-dev.jpeg
 wwwroot\images\mob-dev.jpeg
 wwwroot\js\admin function pages js\add_software.js
-wwwroot\js\general pages js\about_us.js
-wwwroot\js\general pages js\landing_page.js
 wwwroot\js\layout js\layout.js
-wwwroot\js\sector js\sector.js
+wwwroot\js\public pages js\landing_page.js
+wwwroot\js\public pages js\product.js
 wwwroot\js\sign-in js\sign-in.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

@@ -62,6 +62,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=General}/{action=LandingPage}/{id?}");
+    pattern: "{controller=Public}/{action=LandingPage}/{id?}");
 
 app.Run();

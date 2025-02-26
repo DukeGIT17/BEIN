@@ -1,0 +1,70 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<section id="contact_us">
+    <h1 class="section-header">Contact Us</h1>
+    <h4 class="section-subheader">We are here to help you.</h4>
+    <div>
+        <div id="send-message">
+            <form action="#" method="POST">
+                <input asp-for="Sender.Name" placeholder="Name" />
+                <input asp-for="Sender.Surname" placeholder="Surname" />
+                <input asp-for="Sender.Email" placeholder="Email" />
+                <textarea asp-for="Text" placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div id="contact-info">
+            <div class="contact">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="contact-info">
+                    Johannesburg, Gauteng
+                </p>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-phone"></i>
+                <p class="contact-info">+27 81 258 9657</p>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-envelope"></i>
+                <p class="contact-info">BEIN@gmail.com</p>
+            </div>
+            <hr />
+            <div id="socials">
+                <div class="social">
+                    <a href="#" aria-label="Twitter">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="#" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <hr />
+            <p id="rights">
+                &copy; 2024 BEIN. All rights reserved.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    const linkElement = document.createElement("link");
+    linkElement.rel = "stylesheet";
+    linkElement.href = "/css/public pages css/contact_us.css";
+    document.head.appendChild(linkElement);
+</script>

@@ -1,0 +1,160 @@
+﻿@model SoftwareProduct
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<section id="main-content">
+    <div id="header">
+        <img src="/assets/images/default image.png" alt="Product Image" id="product-image" title="Product Image">
+        <div id="product-title-and-vendor">
+            <h1 id="product-title">Autodesk Revit</h1>
+            <span id="product-vendor">
+                <i>Autodesk Inc.</i>
+            </span>
+        </div>
+        <a href="#" id="go-to-website">Get Product</a>
+    </div>
+    <div id="main">
+        <div id="bi-divs">
+            <div id="left-content">
+                <div id="professions">
+                    <span class="profession">Architect</span>
+                    <span class="profession">Landscaper</span>
+                    <span class="profession">Environmental Engineer</span>
+                </div>
+                <div id="project-stages">
+                    <span class="project-stage">Planning</span>
+                    <span class="project-stage">Design</span>
+                    <span class="project-stage">Implementation</span>
+                    <span class="project-stage">Delivery</span>
+                </div>
+                <div id="product-desc">
+                    <div id="desc">
+                        <p>
+                            Autodesk Revit is a building information modelling software for architects,
+                            landscape architects, structural engineers, mechanical, electrical, and plumbing (MEP)
+                            engineers, designers and contractors. The software allows users to design a building
+                            and structure and its components in 3D, annotate the model with 2D drafting elements,
+                            and access building information from the building model's database.
+                        </p>
+                    </div>
+                    <button onclick="showMore()" id="show-more">SHOW MORE</button>
+                </div>
+            </div>
+            <div id="right-content">
+                <div id="bookmark">
+                    <button>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                    <span>Bookmark</span>
+                </div>
+                <div id="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <div id="rating">
+                        <span>Rating: 4.5</span>
+                        <div id="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="features">
+                    <span>Features</span>
+                    <div class="feature">
+                        <span>3D Modeling</span>
+                        <p>Design and model buildings and structures in 3D.</p>
+                    </div>
+                    <div class="feature">
+                        <span>2D Drafting</span>
+                        <p>Annotate the model with 2D drafting elements.</p>
+                    </div>
+                    <div class="feature">
+                        <span>3D Modeling</span>
+                        <p>Design and model buildings and structures in 3D.</p>
+                    </div>
+                    <div class="feature">
+                        <span>2D Drafting</span>
+                        <p>Annotate the model with 2D drafting elements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="leave-a-review">
+            <h2>LEAVE A REVIEW</h2>
+            <form action="#" method="post">
+                <div class="review-input">
+                    <label for="review-title">REVIEW TITLE</label>
+                    <input id="review-title" type="text" name="review-title" required>
+                </div>
+                <div class="review-input">
+                    <label for="rating">RATING</label>
+                    <div id="rating-stars">
+                        <i class="fa-regular fa-star star" data-target="1-star"></i>
+                        <i class="fa-regular fa-star star" data-target="2-star"></i>
+                        <i class="fa-regular fa-star star" data-target="3-star"></i>
+                        <i class="fa-regular fa-star star" data-target="4-star"></i>
+                        <i class="fa-regular fa-star star" data-target="5-star"></i>
+                    </div>
+                    <div id="rating-input">
+                        <input id="1-star" type="radio" name="rating" value="1" required>
+                        <input id="2-star" type="radio" name="rating" value="2" required>
+                        <input id="3-star" type="radio" name="rating" value="3" required>
+                        <input id="4-star" type="radio" name="rating" value="4" required>
+                        <input id="5-star" type="radio" name="rating" value="5" required>
+                    </div>
+                </div>
+                <div class="review-input">
+                    <label id="content-label" for="review-content">REVIEW CONTENT</label>
+                    <textarea id="review-content" name="review-content" required></textarea>
+                </div>
+                <button id="submit-btn" type="submit">Submit Review</button>
+            </form>
+        </div>
+        <div id="reviews">
+            <h2>REVIEWS</h2>
+            <div class="review">
+                <h5>Review Title</h5>
+                <div class="review-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="reviewer">
+                    <span>
+                        <strong>By:</strong>
+                        <i>Reviewer Name</i>
+                    </span>
+                    <span>08/01/2021, 08:10</span>
+                </div>
+                <p class="review-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
+                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
+                </p>
+                <button class="show-more">SHOW MORE</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/js/public pages js/product.js"></script>

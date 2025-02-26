@@ -1,0 +1,7 @@
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\css\general pages css\about_us.css
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\css\general pages css\contact_us.css
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\css\general pages css\landing_page.css
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\css\sectors css\sectors.css
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\js\general pages js\about_us.js
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\js\general pages js\landing_page.js
+C:\Users\Lukhanyo\Desktop\Git Repo\BEIN\BEIN\BEIN Web App\wwwroot\js\sector js\sector.js

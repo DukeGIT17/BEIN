@@ -116,7 +116,7 @@ function addFeature() {
 
 bulkUploadBtn.addEventListener('change', function (event) {
     file = event.target.files[0];
-    handleFile(file);
+    handleFile();
 });
 
 dropArea.addEventListener('dragover', () => dropArea.classList.add('drag-over'));
@@ -125,10 +125,10 @@ dropArea.addEventListener('dragleave', () => dropArea.classList.remove("drag-ove
 dropArea.addEventListener('drop', (event) => {
     dropArea.classList.remove('drag-over');
     file = event.dataTransfer.files[0];
-    handleFile(file);
+    handleFile();
 });
 
-function handleFile(file) {
+function handleFile() {
     if (!file) return;
 
     const allowedExtensions = ['xlsx', 'xls'];
@@ -160,16 +160,6 @@ function formatFileSize(bytes) {
     return `${bytes.toFixed(2)} ${sizes[i]}`;
 }
 
-function hideElement(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-        element.style.display = 'none';
-        file = null;
-    } else {
-        alert('Something went wrong! We couldn\'t remove the selected file.');
-    }
-}
-
 submitBtn.addEventListener('click', async (e) => {
     e.preventDefault()
 
@@ -183,9 +173,10 @@ submitBtn.addEventListener('click', async (e) => {
         })
 
         if (response.ok) {
-            alert('Upload successful.');
-            setTimeout(async () => {
-                await fetch('https://localhost:7222/General/LandingPage');
+            dropArea.style.backgroundColor = 'rgb(36, 236, 36, .5)';
+            setTimeout(() => {
+                dropArea.style.backgroundColor = 'var(--background-color)'
+                fetch('https://localhost:7222/AdminFunctions/AddSoftware');
             }, 1500);
         } else {
             alert(`Upload failed! ${await response.text()}`);

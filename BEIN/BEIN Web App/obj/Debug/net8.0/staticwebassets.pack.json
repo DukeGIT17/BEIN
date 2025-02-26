@@ -69,24 +69,28 @@
       "PackagePath": "staticwebassets\\css\\admin function pages css\\add_software.css"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\about_us.css",
-      "PackagePath": "staticwebassets\\css\\general pages css\\about_us.css"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\contact_us.css",
-      "PackagePath": "staticwebassets\\css\\general pages css\\contact_us.css"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\general pages css\\landing_page.css",
-      "PackagePath": "staticwebassets\\css\\general pages css\\landing_page.css"
-    },
-    {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\layout css\\layout.css",
       "PackagePath": "staticwebassets\\css\\layout css\\layout.css"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\sectors css\\sectors.css",
-      "PackagePath": "staticwebassets\\css\\sectors css\\sectors.css"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\about_us.css",
+      "PackagePath": "staticwebassets\\css\\public pages css\\about_us.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\contact_us.css",
+      "PackagePath": "staticwebassets\\css\\public pages css\\contact_us.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\landing_page.css",
+      "PackagePath": "staticwebassets\\css\\public pages css\\landing_page.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\product.css",
+      "PackagePath": "staticwebassets\\css\\public pages css\\product.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\sectors.css",
+      "PackagePath": "staticwebassets\\css\\public pages css\\sectors.css"
     },
     {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\sign-in css\\sign-in.css",
@@ -8961,20 +8965,16 @@
       "PackagePath": "staticwebassets\\js\\admin function pages js\\add_software.js"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\general pages js\\about_us.js",
-      "PackagePath": "staticwebassets\\js\\general pages js\\about_us.js"
-    },
-    {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\general pages js\\landing_page.js",
-      "PackagePath": "staticwebassets\\js\\general pages js\\landing_page.js"
-    },
-    {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\layout js\\layout.js",
       "PackagePath": "staticwebassets\\js\\layout js\\layout.js"
     },
     {
-      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\sector js\\sector.js",
-      "PackagePath": "staticwebassets\\js\\sector js\\sector.js"
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\public pages js\\landing_page.js",
+      "PackagePath": "staticwebassets\\js\\public pages js\\landing_page.js"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\public pages js\\product.js",
+      "PackagePath": "staticwebassets\\js\\public pages js\\product.js"
     },
     {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\js\\sign-in js\\sign-in.js",

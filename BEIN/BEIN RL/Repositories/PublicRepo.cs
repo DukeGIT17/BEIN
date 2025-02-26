@@ -144,11 +144,16 @@ namespace BEIN_RL.Repositories
                     .Include(f => f.Features)
                     .Include(v => v.Visits)
                     .FirstOrDefaultAsync(s => s.Name.ToLower() == softwareProductName.ToLower());
-                if (software is null) throw new($"Could not find a software product with the name {softwareProductName}.");
+
+                if (software is null) 
+                    throw new($"Could not find a software product with the name {softwareProductName}.");
 
                 var softwares = new List<SoftwareProduct> { software };
                 _returnDictionary = softwares.PopulateWithBase64();
-                if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+
+                if (!(bool)_returnDictionary["Success"]) 
+                    throw new(_returnDictionary["ErrorMessage"] as string);
+
                 return _returnDictionary;
             }
             catch (Exception ex)

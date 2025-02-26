@@ -32,24 +32,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcQWRkU29mdHdhcmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/General/About_Us.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFxBYm91dF9Vcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/General/Contact_Us.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFxDb250YWN0X1VzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/General/Landing_Page.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFxMYW5kaW5nX1BhZ2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Public/About_Us.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXEFib3V0X1VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Public/Contact_Us.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXENvbnRhY3RfVXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Public/Landing_Page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXExhbmRpbmdfUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Public/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Lukhanyo/Desktop/Git Repo/BEIN/BEIN/BEIN Web App/Views/Public/Sector.cshtml]

@@ -448,7 +448,8 @@
       "Review": {
         "required": [
           "header",
-          "reviewText"
+          "reviewText",
+          "reviewTime"
         ],
         "type": "object",
         "properties": {
@@ -466,6 +467,10 @@
             "maxLength": 1200,
             "minLength": 50,
             "type": "string"
+          },
+          "reviewTime": {
+            "type": "string",
+            "format": "date-time"
           },
           "ratingId": {
             "type": "string",

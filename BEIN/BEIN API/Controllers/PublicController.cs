@@ -1,7 +1,6 @@
 ﻿using BEIN_DL.Models;
 using BEIN_ServerSide_SL.IServerSideServices;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace BEIN_API.Controllers
 {
@@ -17,7 +16,10 @@ namespace BEIN_API.Controllers
             try                                                      
             {
                 _returnDictionary = publicService.GetAllSectorsAsync().Result;
-                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+                
+                if (!(bool)_returnDictionary["Success"])
+                    return BadRequest(_returnDictionary["ErrorMessage"]);
+
                 return Ok(_returnDictionary["Result"]);
             }
             catch (Exception ex)
@@ -32,7 +34,10 @@ namespace BEIN_API.Controllers
             try
             {
                 _returnDictionary = publicService.GetSectorAsync(sectorName).Result;
-                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+
+                if (!(bool)_returnDictionary["Success"])
+                    return BadRequest(_returnDictionary["ErrorMessage"]);
+
                 return Ok(_returnDictionary["Result"]);
             }
             catch (Exception ex)
@@ -47,7 +52,10 @@ namespace BEIN_API.Controllers
             try
             {
                 _returnDictionary = publicService.GetAllSoftwareProductsAsync().Result;
-                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+
+                if (!(bool)_returnDictionary["Success"]) 
+                    return BadRequest(_returnDictionary["ErrorMessage"]);
+
                 return Ok(_returnDictionary["Result"]);
             }
             catch (Exception ex)
@@ -62,7 +70,10 @@ namespace BEIN_API.Controllers
             try
             {
                 _returnDictionary = publicService.GetSoftwareProductAsync(softwareName).Result;
-                if (!(bool)_returnDictionary["Success"]) return BadRequest(_returnDictionary["ErrorMessage"]);
+
+                if (!(bool)_returnDictionary["Success"]) 
+                    return BadRequest(_returnDictionary["ErrorMessage"]);
+
                 return Ok(_returnDictionary["Result"]);
             }
             catch (Exception ex)

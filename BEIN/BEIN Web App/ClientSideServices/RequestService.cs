@@ -18,7 +18,9 @@ namespace BEIN_Web_App.ClientSideServices
             try
             {
                 var response = await client.GetAsync(BasePath + endpoint);
-                if (!response.IsSuccessStatusCode) throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
+
+                if (!response.IsSuccessStatusCode) 
+                    throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
 
                 _returnDictionary["Success"] = true;
                 _returnDictionary["Result"] = await response.Content.ReadFromJsonAsync<T>();
@@ -37,7 +39,9 @@ namespace BEIN_Web_App.ClientSideServices
             try
             {
                 var response = await client.GetAsync(BasePath + endpoint);
-                if (!response.IsSuccessStatusCode) throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
+
+                if (!response.IsSuccessStatusCode) 
+                    throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
 
                 var token = httpContextAccessor.HttpContext!.Request.Cookies["AuthToken"];
                 _returnDictionary["Success"] = true;
@@ -62,7 +66,8 @@ namespace BEIN_Web_App.ClientSideServices
                     RequestUri = new Uri(BasePath + endpoint)
                 });
 
-                if (!response.IsSuccessStatusCode) throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
+                if (!response.IsSuccessStatusCode) 
+                    throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
 
                 _returnDictionary["Success"] = true;
                 return _returnDictionary;
@@ -79,6 +84,8 @@ namespace BEIN_Web_App.ClientSideServices
         {
             try
             {
+                string token = "";
+
                 var response = await client.SendAsync(new HttpRequestMessage
                 {
                     Content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json"),
@@ -86,9 +93,9 @@ namespace BEIN_Web_App.ClientSideServices
                     RequestUri = new Uri(BasePath + "/Account/SignIn")
                 });
 
-                if (!response.IsSuccessStatusCode) throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
+                if (!response.IsSuccessStatusCode) 
+                    throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
 
-                string token = "";
                 if (response.Headers.TryGetValues("Set-Cookie", out var cookieHeaders))
                 {
                     var authHeader = cookieHeaders.FirstOrDefault(c => c.StartsWith("AuthToken="));
@@ -96,7 +103,8 @@ namespace BEIN_Web_App.ClientSideServices
                         token = authHeader.Replace("AuthToken=", "");
                 }
 
-                if (await response.Content.ReadFromJsonAsync<List<ClaimDto>>() is not List<ClaimDto> claims) throw new("Could not retrieve claims from the API.");
+                if (await response.Content.ReadFromJsonAsync<List<ClaimDto>>() is not List<ClaimDto> claims) 
+                    throw new("Could not retrieve claims from the API.");
                 
                 var claimsIdentity = new ClaimsIdentity(claims.Select(c => new Claim(c.Type, c.Value)), "Cookies");
                 await httpContextAccessor.HttpContext!.SignInAsync("Cookies", new ClaimsPrincipal(claimsIdentity));
