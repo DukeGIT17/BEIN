@@ -5,11 +5,11 @@
 
 <section id="main-content">
     <div id="header">
-        <img src="/assets/images/default image.png" alt="Product Image" id="product-image" title="Product Image">
+        <img src="@Model.ImageBase64" alt="@Model.Name Logo" id="product-image" title="@Model.Name Logo">
         <div id="product-title-and-vendor">
-            <h1 id="product-title">Autodesk Revit</h1>
+            <h1 id="product-title">@Model.Name</h1>
             <span id="product-vendor">
-                <i>Autodesk Inc.</i>
+                <i>@Model.Vendor</i>
             </span>
         </div>
         <a href="#" id="go-to-website">Get Product</a>
@@ -18,24 +18,21 @@
         <div id="bi-divs">
             <div id="left-content">
                 <div id="professions">
-                    <span class="profession">Architect</span>
-                    <span class="profession">Landscaper</span>
-                    <span class="profession">Environmental Engineer</span>
+                    @foreach(string profession in Model.Professions) 
+                    {
+                        <span class="profession">@profession</span>
+                    }
                 </div>
                 <div id="project-stages">
-                    <span class="project-stage">Planning</span>
-                    <span class="project-stage">Design</span>
-                    <span class="project-stage">Implementation</span>
-                    <span class="project-stage">Delivery</span>
+                    @foreach (string projectStage in Model.ProjectStages)
+                    {
+                        <span class="project-stage">@projectStage</span>
+                    }
                 </div>
                 <div id="product-desc">
                     <div id="desc">
                         <p>
-                            Autodesk Revit is a building information modelling software for architects,
-                            landscape architects, structural engineers, mechanical, electrical, and plumbing (MEP)
-                            engineers, designers and contractors. The software allows users to design a building
-                            and structure and its components in 3D, annotate the model with 2D drafting elements,
-                            and access building information from the building model's database.
+                            @Model.Description
                         </p>
                     </div>
                     <button onclick="showMore()" id="show-more">SHOW MORE</button>
@@ -48,37 +45,46 @@
                     </button>
                     <span>Bookmark</span>
                 </div>
+
+                @{
+                    int totalRatings = 0;
+
+                    foreach (var rating in Model.Ratings) 
+                    {
+                        totalRatings += rating.RatingValue;
+                    }
+
+
+                    double rate = totalRatings == 0 || Model.Ratings.Count == 0 ? 0 : totalRatings / Model.Ratings.Count;
+
+                    int unColoredStars = 5 - Convert.ToInt32(rate);
+                }
                 <div id="rate">
                     <i class="fa-solid fa-star"></i>
                     <div id="rating">
-                        <span>Rating: 4.5</span>
+                        <span>Rating: @rate</span>
                         <div id="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            @for (int i = 0; i < (5 - unColoredStars); i++) 
+                            {
+                                <i class="fa-solid fa-star"></i>
+                            }
+
+                            @for (int i = 0; i < unColoredStars; i++)
+                            {
+                                <i class="fa-regular fa-star"></i>
+                            }
                         </div>
                     </div>
                 </div>
                 <div id="features">
                     <span>Features</span>
-                    <div class="feature">
-                        <span>3D Modeling</span>
-                        <p>Design and model buildings and structures in 3D.</p>
-                    </div>
-                    <div class="feature">
-                        <span>2D Drafting</span>
-                        <p>Annotate the model with 2D drafting elements.</p>
-                    </div>
-                    <div class="feature">
-                        <span>3D Modeling</span>
-                        <p>Design and model buildings and structures in 3D.</p>
-                    </div>
-                    <div class="feature">
-                        <span>2D Drafting</span>
-                        <p>Annotate the model with 2D drafting elements.</p>
-                    </div>
+                    @foreach (var feature in Model.Features)
+                    {
+                        <div class="feature">
+                            <span>@feature.Title</span>
+                            <p>@feature.Description</p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
@@ -115,44 +121,37 @@
         </div>
         <div id="reviews">
             <h2>REVIEWS</h2>
-            <div class="review">
-                <h5>Review Title</h5>
-                <div class="review-rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="reviewer">
-                    <span>
-                        <strong>By:</strong>
-                        <i>Reviewer Name</i>
-                    </span>
-                    <span>08/01/2021, 08:10</span>
-                </div>
-                <p class="review-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio nec odio tincidunt ultricies.
-                    Nullam nec nunc nec odio tincidunt ultricies. Nullam nec nunc nec odio tincidunt ultricies.
-                </p>
-                <button class="show-more">SHOW MORE</button>
-            </div>
+            @foreach (var rating2 in Model.Ratings)
+            {
+                if (rating2.Review is not null) 
+                {
+                    <div class="review">
+                        <h5>Review Title</h5>
+                        <div class="review-rating">
+                            @for (int i = 0; i < rating2.RatingValue; i++)
+                            {
+                                <i class="fa-solid fa-star"></i>
+                            }
+
+                            @for (int i = 0; i < (5 - rating2.RatingValue); i++)
+                            {
+                                <i class="fa-regular fa-star"></i>
+                            }
+                        </div>
+                        <div class="reviewer">
+                            <span>
+                                <strong>By:</strong>
+                                <i>@rating2.User!.Name @rating2.User.Surname</i>
+                            </span>
+                            <span>@rating2.Review.ReviewTime</span>
+                        </div>
+                        <p class="review-content">
+                            @rating2.Review.ReviewText
+                        </p>
+                        <button class="show-more">SHOW MORE</button>
+                    </div>
+                }
+            }
         </div>
     </div>
 </section>

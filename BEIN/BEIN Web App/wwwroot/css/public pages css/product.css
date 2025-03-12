@@ -42,7 +42,7 @@
 #bi-divs {
     display: flex;
     justify-content: space-between;
-    height: 50vh;
+    height: fit-content;
 }
 
 #left-content {
@@ -50,6 +50,7 @@
     flex-direction: column;
     align-items: center;
     width: 65vw;
+    height: fit-content;
     padding: 1rem 1rem 1rem 16rem;
 }
 
@@ -67,7 +68,7 @@
 }
 
 #project-stages {
-    width: 100%;
+    width: 90%;
     display: flex;
     gap: 1rem;
     margin-bottom: .5rem;
@@ -84,7 +85,7 @@
 
 #desc {
     padding: .4rem;
-    height: 70%;
+    max-height: 30vh;
     overflow: hidden;
 }
 
@@ -164,6 +165,8 @@
 #features {
     background-color: white;
     width: 310px;
+    max-height: 300px;
+    overflow: auto;
     box-shadow: var(--shadow-lg);
     padding: .3rem;
     font-size: larger;
@@ -215,7 +218,7 @@
 
 .review-input label {
     font-weight: 500;
-    width: 12rem;
+    width: 180px;
     padding: .5rem 1.5rem .5rem 0;
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);

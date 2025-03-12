@@ -1,9 +1,11 @@
 wwwroot\css\admin function pages css\add_software.css
 wwwroot\css\layout css\layout.css
+wwwroot\css\layout css\responsive layout.css
 wwwroot\css\public pages css\about_us.css
 wwwroot\css\public pages css\contact_us.css
 wwwroot\css\public pages css\landing_page.css
 wwwroot\css\public pages css\product.css
+wwwroot\css\public pages css\responsive product.css
 wwwroot\css\public pages css\sectors.css
 wwwroot\css\sign-in css\sign-in.css
 wwwroot\css\site.css

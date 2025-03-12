@@ -1,24 +1,39 @@
-﻿const stars = document.querySelectorAll('.star');
-const linkEl = document.createElement('link');
+﻿const linkEl = document.createElement('link');
+const responsiveLinkEl = document.createElement('link');
+
 linkEl.rel = 'stylesheet';
 linkEl.href = '/css/public pages css/product.css';
-document.head.appendChild(linkEl);
 
+responsiveLinkEl.rel = 'stylesheet';
+responsiveLinkEl.href = '/css/public pages css/responsive product.css';
+
+document.head.appendChild(linkEl);
+document.head.appendChild(responsiveLinkEl);
+
+
+const stars = document.querySelectorAll('.star');
+const showMoreBtn = document.getElementById('show-more');
+const description = document.getElementById('desc');
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (description.clientHeight <= 150) {
+        showMoreBtn.style.display = 'none';
+    }
+});
 
 function showMore() {
-    const showMore = document.getElementById('show-more');
-    const description = document.getElementById('desc');
-
-    if (showMore) {
-        if (showMore.innerText === 'SHOW MORE') {
-            description.style.height = 'fit-content';
-            showMore.innerText = 'SHOW LESS';
+    if (showMoreBtn) {
+        if (showMoreBtn.innerText === 'SHOW MORE') {
+            description.style.maxHeight = '50vh';
+            description.style.overflow = 'auto';
+            showMoreBtn.innerText = 'SHOW LESS';
         } else {
-            description.style.height = '70%';
-            showMore.innerText = 'SHOW MORE';
+            description.style.maxHeight = '30vh';
+            description.style.overflow = 'hidden';
+            showMoreBtn.innerText = 'SHOW MORE';
         }
     } else {
-        console.alert('Could not find the show more button element.');
+        alert('Could not find the show more button element.');
     }
 }
 
@@ -56,3 +71,15 @@ stars.forEach((star, index) => {
 
     })
 });
+
+function areAllStarsSelected() {
+    let allStarsSelected = true;
+
+    stars.forEach(star => {
+        if (!star.classList.contains('star-selected')) {
+            allStarsSelected = false;
+        }
+    })
+
+    return allStarsSelected;
+}

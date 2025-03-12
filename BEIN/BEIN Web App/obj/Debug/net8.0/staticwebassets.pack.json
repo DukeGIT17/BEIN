@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\css\\layout css\\layout.css"
     },
     {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\layout css\\responsive layout.css",
+      "PackagePath": "staticwebassets\\css\\layout css\\responsive layout.css"
+    },
+    {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\about_us.css",
       "PackagePath": "staticwebassets\\css\\public pages css\\about_us.css"
     },
@@ -87,6 +91,10 @@
     {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\product.css",
       "PackagePath": "staticwebassets\\css\\public pages css\\product.css"
+    },
+    {
+      "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\responsive product.css",
+      "PackagePath": "staticwebassets\\css\\public pages css\\responsive product.css"
     },
     {
       "Id": "C:\\Users\\Lukhanyo\\Desktop\\Git Repo\\BEIN\\BEIN\\BEIN Web App\\wwwroot\\css\\public pages css\\sectors.css",

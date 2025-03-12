@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BEIN Web App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+911b7d9b7262a06593e8fc8e8c6aab7d6c06860b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14a3310babcc7e8ca9e68d0b75fa25587b2e84cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BEIN Web App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BEIN Web App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

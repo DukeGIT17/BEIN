@@ -55,7 +55,7 @@ namespace BEIN_Web_App.Controllers
             {
                 _returnDictionary = requestService.GetRequestAsync<SoftwareProduct>("/Public/GetSoftware?softwareName=" + productName).Result;
 
-                if (!(bool)_returnDictionary["Success"])
+                 if (!(bool)_returnDictionary["Success"])
                     throw new(_returnDictionary["ErrorMessage"] as string);
 
                 if (_returnDictionary["Result"] is not SoftwareProduct product) 

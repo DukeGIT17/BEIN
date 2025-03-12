@@ -48,11 +48,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>98gxu3fkzu</Fingerprint>
-      <Integrity>l3WNrJGt3jqCqJ1kj5wInUFhfmfBWx/whYxn85GLrPo=</Integrity>
+      <Fingerprint>ky7taubq9x</Fingerprint>
+      <Integrity>dIDWacG44jvr8oG9iw03RMP+iy6n5P/hRqdSQ1+6ER4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\layout css\layout.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\layout css\responsive layout.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BEIN Web App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BEIN Web App</BasePath>
+      <RelativePath>css/layout css/responsive layout.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ys3z9hgq4h</Fingerprint>
+      <Integrity>/vRfwSM3f1Cug1U8f37LRSZBrtUPzoYxNLPFRc1OoOs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\layout css\responsive layout.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\public pages css\about_us.css'))">
       <SourceType>Package</SourceType>
@@ -120,11 +138,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bkfcwei6d9</Fingerprint>
-      <Integrity>y5HnEla3ERFcpd2bn+NRTgY4dE/kzzECu04HeIPaYmU=</Integrity>
+      <Fingerprint>353b458mu0</Fingerprint>
+      <Integrity>WWOsOx8nYVmv1s1aVtDBcV+mbBWcIbHU/rr/LWUZ8xA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\public pages css\product.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\public pages css\responsive product.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BEIN Web App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BEIN Web App</BasePath>
+      <RelativePath>css/public pages css/responsive product.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sqk4g43ysb</Fingerprint>
+      <Integrity>BJIhmBrDGRYrz0iTHRggfpsqnscrP22keEBAEdUS+hM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\public pages css\responsive product.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\public pages css\sectors.css'))">
       <SourceType>Package</SourceType>
@@ -40062,8 +40098,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dzo1cllck2</Fingerprint>
-      <Integrity>R3vIz8C2hjOdFptlT0c23FJE27fYq4PcKFxLeGPGivE=</Integrity>
+      <Fingerprint>vcqa8zi3nx</Fingerprint>
+      <Integrity>EQgSgm4fcQzUcnUNlwUE1bmzreN2TRhyfknsBkfF/J4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin function pages js\add_software.js'))</OriginalItemSpec>
@@ -40080,8 +40116,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>he0hgr7m8i</Fingerprint>
-      <Integrity>SWjIwFVFuXcu1Q9JQHhfpdxrci/aubhqFdOBDmVOUSg=</Integrity>
+      <Fingerprint>h3122rqrst</Fingerprint>
+      <Integrity>DWBMoQPKj0gZUyASG2neJBFJP+05oubNOwLYccVqHiQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\layout js\layout.js'))</OriginalItemSpec>
@@ -40116,8 +40152,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zyjy2z1v5z</Fingerprint>
-      <Integrity>ZejlP2rKBGDWCF/P2eZtaoEmjQofSFbjwU4tHeNEUw0=</Integrity>
+      <Fingerprint>22fm59xte1</Fingerprint>
+      <Integrity>RtE/HTZtu+LGBoZ38LMmOLuP9mX26g/KavsGmT7r7gg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\public pages js\product.js'))</OriginalItemSpec>

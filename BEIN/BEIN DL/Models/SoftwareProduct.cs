@@ -34,7 +34,7 @@ namespace BEIN_DL.Models
         [StringLength(100, ErrorMessage = "Vendor name cannot be greater than 100 characters.")]
         public string Vendor { get; set; }
         
-        public string ProjectStage { get; set; }
+        public List<string> ProjectStages { get; set; }
 
         public List<string> Professions { get; set; }
 

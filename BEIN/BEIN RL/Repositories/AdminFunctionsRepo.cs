@@ -102,7 +102,7 @@ namespace BEIN_RL.Repositories
                             Name = worksheet.Cells[row, 1].Value.ToString()!.Trim(),
                             Description = worksheet.Cells[row, 2].Value.ToString()!.Trim(),
                             Vendor = worksheet.Cells[row, 3].Value.ToString()!.Trim(),
-                            ProjectStage = worksheet.Cells[row, 4].Value.ToString()!.Trim(),
+                            ProjectStages = worksheet.GetListFromCell(row, 4, ','),
                             Professions = worksheet.GetListFromCell(row, 5, ','),
                             Sectors = [],
                             Features = []

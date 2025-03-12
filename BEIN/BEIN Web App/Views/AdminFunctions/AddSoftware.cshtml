@@ -19,7 +19,11 @@
                     <input asp-for="Name" id="name" placeholder="Name" />
                 </div>
                 <input asp-for="Vendor" id="vendor" placeholder="Vendor" />
-                <input asp-for="ProjectStage" id="project-stage" placeholder="Project Stage" />
+                <input asp-for="ProjectStages" list="project-stages" id="project-stage" placeholder="Project Stage" />
+                <datalist id="project-stages">
+                    <option value="Planning">Planning</option>
+                    <option value="Implementation">Implementation</option>
+                </datalist>
                 <input list="sectors" name="sector" placeholder="Sector" />
                 <datalist id="sectors">
                     @foreach (var sector in ViewBag.sectors as List<Sector>) 

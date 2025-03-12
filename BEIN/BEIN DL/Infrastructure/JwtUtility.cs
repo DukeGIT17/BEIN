@@ -27,7 +27,7 @@ namespace BEIN_DL.Infrastructure
                     new Claim("username", $"{user.Name} {user.Surname}"),
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                     new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.Profession == "System Admin" ? "System Admin" : "User")
+                    new Claim(ClaimTypes.Role, user.Profession == "Admin" ? "Admin" : "User")
 
                 ],
                 expires: DateTime.UtcNow.AddMinutes(configuration.GetValue<int>("JwtSettings:ExpirationInMinutes")),

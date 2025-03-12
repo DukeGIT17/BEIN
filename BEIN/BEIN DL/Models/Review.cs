@@ -17,7 +17,7 @@ namespace BEIN_DL.Models
         public string ReviewText { get; set; }
 
         [Required(ErrorMessage = "Review date and time not provided.")]
-        public DateTime ReviewTime { get; set; }
+        public DateTime ReviewTime { get; set; } = DateTime.Now;
 
         #region Foreign Keys
         [ForeignKey(nameof(Rating))]

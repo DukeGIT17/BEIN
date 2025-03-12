@@ -40,7 +40,7 @@
                 <div class="table-row">
                     <div class="name body">
                         <img class="software-logo" src="@sp.Product!.ImageBase64">
-                        @sp.Product.Name
+                        <a asp-action="GetProduct" asp-route-productName="@sp.Product.Name">@sp.Product.Name</a>
                     </div>
                     <div class="plan body">
                         Free

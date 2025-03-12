@@ -18,7 +18,7 @@ namespace BEIN_API.UtilityPrograms
             var context = scope.ServiceProvider.GetRequiredService<BeinDbContext>();
             string? errorMessage = null;
 
-            var roles = new[] { "System Admin", "User" };
+            var roles = new[] { "Admin", "User" };
             foreach (var role in roles)
             {
                 if (!await roleManager.RoleExistsAsync(role))
@@ -67,7 +67,7 @@ namespace BEIN_API.UtilityPrograms
 
                     if (!OutcomeUtilities.IdentityOutcome(await userManager.CreateAsync(sysAdmin, "Admin101!"), out errorMessage)) WriteLine(errorMessage);
                     if (!OutcomeUtilities.IdentityOutcome(await userManager.AddClaimsAsync(sysAdmin, claims), out errorMessage)) WriteLine(errorMessage);
-                    if (!OutcomeUtilities.IdentityOutcome(await userManager.AddToRoleAsync(sysAdmin, "System Admin"), out errorMessage)) WriteLine(errorMessage);
+                    if (!OutcomeUtilities.IdentityOutcome(await userManager.AddToRoleAsync(sysAdmin, "Admin"), out errorMessage)) WriteLine(errorMessage);
 
                     var user = await context.Users.FirstOrDefaultAsync(u => u.Email == admin.Email);
                     if (user is null)

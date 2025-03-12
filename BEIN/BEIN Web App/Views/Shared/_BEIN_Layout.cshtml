@@ -17,27 +17,31 @@
 
     <!-- custom stylesheets -->
     <link rel="stylesheet" href="~/css/layout css/layout.css" />
+    <link rel="stylesheet" href="~/css/layout css/responsive layout.css" />
 
 </head>
 <body>
     <header>
+        <button id="toggle-sidebar">
+            <i id="toggle-btn-icon" class="fa-solid fa-arrow-left"></i>
+        </button>
         <nav>
-            <a asp-controller="Public" asp-action="LandingPage" class="logo">
+            <a asp-controller="Public" asp-action="LandingPage" id="logo">
                 <i class="ri-planet-line"></i>
                 <span>BEIN</span>
             </a>
 
-            <div class="nav_items">
-                <ul class="nav_list">
+            <div id="nav_items">
+                <ul id="nav_list">
                     <li>
                         <a asp-controller="Public" asp-action="AboutUsPage">About Us</a>
                     </li>
                     <li class="sol_dd">
-                        <a class="solutions">
+                        <a id="solutions">
                             Solutions
                             <i class="ri-arrow-down-s-line"></i>
                         </a>
-                        <div class="dd-content">
+                        <div id="dd-content">
                             @foreach (var sector in await NavigationService.GetAllSectorsAsync()) 
                             {
                                 <a asp-controller="Public" asp-action="GetSector" asp-route-sectorName="@sector.Title">
@@ -50,33 +54,83 @@
                     <li><a asp-controller="Public" asp-action="ContactUsPage">Contact Us</a></li>
                 </ul>
 
-                <div class="nav_actions">
-                    <div class="search_container">
-                        <input type="search" placeholder="Search..." class="search_input">
-                        <button class="search_btn">
-                            <i class="ri-search-line"></i>
-                        </button>
+                <div id="nav_actions">
+                    <div id="search" class="search">
+                        <div id="search_container">
+                            <input type="search" placeholder="Search..." id="search-field" class="search_input">
+                            <button id="search_btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                        <div id="search-display-div" class="search-display">
+                            <div class="filters">
+                                <button class="filter selected">
+                                    All
+                                </button>
+                                <button class="filter">
+                                    Sectors
+                                </button>
+                                <button class="filter">
+                                    Software
+                                </button>
+                            </div>
+                            <div id="sectors-area" class="area">
+                                <div class="area-title">
+                                    Sectors
+                                </div>
+                            </div>
+                            <div id="software-area" class="area">
+                                <div class="area-title">
+                                    Software
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    @if (accessor.HttpContext!.User.Identity is not null && accessor.HttpContext.User.Identity.IsAuthenticated) 
-                    {
-                        var names = accessor.HttpContext.User.Claims.Where(claim => claim.Type.Equals("username", StringComparison.OrdinalIgnoreCase)).First().Value.Split(' ').Select(val => val.Remove(1));
-                        var displayName = string.Join("", names);
+                    <div id="nav_signin">
+                        <a href="#">
+                            <i class="acc_icon ri-lock-line"></i>
+                            Sign In
+                        </a>
+                    </div>
 
-                        <div class="signed-in">
-                            <div id="username">
-                                @displayName
-                            </div>
-                            <div id="user-menu">
-                                <a class="profile">
-                                    <i class="fa-regular fa-user"></i>
-                                    My Profile
-                                </a>
-                                <a class="bookmarks">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                    My Bookmarks
-                                </a>
-                                @if (accessor.HttpContext.User.Claims.Where(claim => claim.Type.EndsWith("role")).First().Value.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                    @{
+                        IEnumerable<string> names;
+                        string displayName = "";
+
+                        var user = accessor.HttpContext!.User;
+                        bool userIsAuthenticated = user.Identity is not null && user.Identity.IsAuthenticated;
+                        if (userIsAuthenticated)
+                        {
+                            names = user.Claims.Where(claim => claim.Type.Equals("username", StringComparison.OrdinalIgnoreCase))
+                            .First()
+                            .Value
+                            .Split(' ')
+                            .Select(val => val.Remove(1));
+
+                            displayName = string.Join("", names);
+                        }
+
+                        string signedIn = userIsAuthenticated ? "block" : "none";
+                        string notSignedIn = userIsAuthenticated ? "none" : "block";
+                    }
+
+                    <div id="signed-in" style="display:@signedIn;">
+                        <div id="username">
+                            @displayName
+                        </div>
+                        <div id="user-menu">
+                            <a class="profile">
+                                <i class="fa-regular fa-user"></i>
+                                My Profile
+                            </a>
+                            <a class="bookmarks">
+                                <i class="fa-regular fa-bookmark"></i>
+                                My Bookmarks
+                            </a>
+                            @if (userIsAuthenticated) 
+                            {
+                                @if (user.Claims.Where(claim => claim.Type.EndsWith("role")).First().Value.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                                 {
                                     <hr>
                                     <a asp-controller="AdminFunctions" asp-action="AddSoftware" class="add-software">
@@ -88,100 +142,25 @@
                                         Remove/Modify Software
                                     </a>
                                 }
-                                <hr>
-                                <a asp-controller="Account" asp-action="SignOut" class="signout">
-                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                    Sign Out
-                                </a>
-                            </div>
-                        </div>
-                    }
-                    else 
-                    {
-                        <div class="nav_signin">
-                            <a asp-controller="Account" asp-action="SignInOrRegister">
-                                <i class="acc_icon ri-lock-line"></i>
-                                Sign In
-                            </a>
-                        </div>
-                    }
-                </div>
-            </div>
-            <div id="nav_toggle">
-                <i class="ri-menu-line"></i>
-            </div>
-        </nav>
-    </header>
-
-    <div id="side-bar">
-        <div class="nav_items">
-            <ul class="nav_list">
-                <li>
-                    <a asp-controller="Public" asp-action="AboutUsPage">About Us</a>
-                </li>
-                <li class="sol_dd">
-                    <a class="solutions">
-                        Solutions
-                        <i class="ri-arrow-down-s-line"></i>
-                    </a>
-                    <div class="dd-content">
-                        @foreach (var sector in await NavigationService.GetAllSectorsAsync())
-                        {
-                            <a asp-controller="Public" asp-action="GetSector" asp-route-sectorName="@sector.Title">
-                                <i class="fa-solid fa-caret-right"></i>
-                                @sector.Title
-                            </a>
-                        }
-                    </div>
-                </li>
-                <li>
-                    <a asp-controller="Public" asp-action="ContactUsPage">Contact Us</a>
-                </li>
-            </ul>
-
-            <div class="nav_actions">
-                <div class="search_container">
-                    <input type="search" placeholder="Search..." class="search_input">
-                    <button class="search_btn">
-                        <i class="ri-search-line"></i>
-                    </button>
-                </div>
-
-                @if (accessor.HttpContext!.User.Identity is not null && accessor.HttpContext.User.Identity.IsAuthenticated)
-                {
-                    <div class="signed-in">
-                        <div id="username-sb">
-                            Lukhanyo Mayekiso
-                        </div>
-                        <div id="user-menu-sb">
-                            <a class="profile">
-                                <i class="fa-regular fa-user"></i>
-                                My Profile
-                            </a>
-                            <a class="bookmarks">
-                                <i class="fa-regular fa-bookmark"></i>
-                                My Bookmarks
-                            </a>
+                            }
                             <hr>
-                            <a asp-controller="Account" asp-action="SignOut" class="signout">
+                            <a asp-controller="Account" asp-action="SignOut" id="signout">
                                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                                 Sign Out
                             </a>
                         </div>
                     </div>
-                }
-                else
-                {
-                    <div class="nav_signin">
+
+                    <div id="nav_signin" style="display:@notSignedIn;">
                         <a asp-controller="Account" asp-action="SignInOrRegister">
                             <i class="acc_icon ri-lock-line"></i>
                             Sign In
                         </a>
                     </div>
-                }
+                </div>
             </div>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <div>
         @RenderBody()

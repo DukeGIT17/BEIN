@@ -33,11 +33,16 @@ namespace BEIN_RL.Repositories
                     {
                         var softwares = new List<SoftwareProduct> { sp.Product! };
                         _returnDictionary = softwares.PopulateWithBase64();
-                        if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+
+                        if (!(bool)_returnDictionary["Success"])
+                            throw new(_returnDictionary["ErrorMessage"] as string);
+
                         if (_returnDictionary["Result"] is not List<SoftwareProduct> softwareList) 
                             throw new($"Failed to acquire one of the softwares from {sp.SectorTitle} sector.");
 
                         sp.Product = softwareList[0];
+
+                        sp.Product.Sectors = null;
                     }
                 }
 
@@ -74,7 +79,10 @@ namespace BEIN_RL.Repositories
                 if (softwares.Count == 0 || softwares is null) throw new("No software found!");
 
                 _returnDictionary = softwares.PopulateWithBase64();
-                if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+
+                if (!(bool)_returnDictionary["Success"])
+                    throw new(_returnDictionary["ErrorMessage"] as string);
+
                 return _returnDictionary;
             }
             catch (Exception ex)
@@ -106,7 +114,10 @@ namespace BEIN_RL.Repositories
                     {
                         var softwares = new List<SoftwareProduct> { sp.Product! };
                         _returnDictionary = softwares.PopulateWithBase64();
-                        if (!(bool)_returnDictionary["Success"]) throw new(_returnDictionary["ErrorMessage"] as string);
+
+                        if (!(bool)_returnDictionary["Success"])
+                            throw new(_returnDictionary["ErrorMessage"] as string);
+
                         if (_returnDictionary["Result"] is not List<SoftwareProduct> softwareList)
                             throw new($"Failed to acquire one of the softwares from {sp.SectorTitle} sector.");
 
@@ -143,10 +154,33 @@ namespace BEIN_RL.Repositories
                     .Include(s => s.Sectors)
                     .Include(f => f.Features)
                     .Include(v => v.Visits)
+                    .Include(r => r.Ratings)?
+                    .ThenInclude(r => r.Review)
                     .FirstOrDefaultAsync(s => s.Name.ToLower() == softwareProductName.ToLower());
 
                 if (software is null) 
                     throw new($"Could not find a software product with the name {softwareProductName}.");
+
+                foreach (var feature in software.Features)
+                    feature.SoftwareProduct = null;
+
+                foreach (var visit in software.Visits)
+                    visit.Product = null;
+
+                foreach (var sector in software.Sectors)
+                    sector.Product = null;
+
+                List<User> users = await context.Users.ToListAsync();
+
+                foreach (var u in users)
+                {
+                    foreach (var rating in software.Ratings)
+                    {
+                        rating.Software = null;
+                        if (u.Id == rating.Id)
+                            rating.User = u;
+                    }
+                }
 
                 var softwares = new List<SoftwareProduct> { software };
                 _returnDictionary = softwares.PopulateWithBase64();
@@ -154,6 +188,7 @@ namespace BEIN_RL.Repositories
                 if (!(bool)_returnDictionary["Success"]) 
                     throw new(_returnDictionary["ErrorMessage"] as string);
 
+                _returnDictionary["Result"] = software;
                 return _returnDictionary;
             }
             catch (Exception ex)

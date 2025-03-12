@@ -22,7 +22,7 @@ namespace BEIN_Web_App.ClientSideServices
                 if (!response.IsSuccessStatusCode) 
                     throw new($"{response.ReasonPhrase}: {await response.Content.ReadAsStringAsync()}");
 
-                _returnDictionary["Success"] = true;
+                    _returnDictionary["Success"] = true;
                 _returnDictionary["Result"] = await response.Content.ReadFromJsonAsync<T>();
                 return _returnDictionary;
             }
